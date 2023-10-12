@@ -1,6 +1,10 @@
+
 import { useState } from "react";
 import Post from "./assets/post";
 import "./App.css";
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 import LoginForm from "./Auth/Login/LoginForm";
 import Register from "./Auth/Register/Register";
 import Logout from "./Auth/Logout/Logout";
@@ -22,6 +26,6 @@ function App() {
       </Router>
     </>
   );
-}
+
 
 export default App;
