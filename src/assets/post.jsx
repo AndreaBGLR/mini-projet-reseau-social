@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./post.css";
+
 function CreatePost({ onPostCreated }) {
   const apiUrl =
     "https://social-network-api.osc-fr1.scalingo.io/serial-viewer/post";
@@ -7,6 +8,7 @@ function CreatePost({ onPostCreated }) {
 
   async function createPost() {
     try {
+      console.log("crea du post");
       const response = await fetch(apiUrl, {
         method: "POST",
         headers: {

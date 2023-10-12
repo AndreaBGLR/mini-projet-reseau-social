@@ -28,10 +28,10 @@ function RenderPosts() {
     <div>
       <h2>Posts Existants</h2>
       <ul>
-        {posts.map((p) => (
-          <li key={p.id}>
-            <h3>{p.title}</h3>
-            <p>{p.content}</p>
+        {posts.map((post) => (
+          <li key={post.id}>
+            <h3>{post.title}</h3>
+            <p>{post.content}</p>
           </li>
         ))}
       </ul>
