@@ -1,31 +1,35 @@
-import { useState } from "react";
-import Post from "./assets/post";
-import "./App.css";
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import LoginForm from "./Auth/Login/LoginForm";
-import Register from "./Auth/Register/Register";
-import Logout from "./Auth/Logout/Logout";
-import Footer from "./Footer/Footer";
+import { useState } from 'react'
+import './App.css'
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import SearchPage from './components/searchPage/SearchPage';
+import Home from './components/home/Home';
+
+import Post from "./assets/post";
+import React from "react";
 import SearchBar from "./searchBar";
 
-function App() {
-    return (
-        <>
-            <Router>
-                <SearchBar />
-                <Routes>
-                    <Route path="/" element={<LoginForm />} />
-                    <Route path="/Register" element={<Register />} />
-                    <Route path="/logout" component={<Logout />} />
-                    {/* Autres routes */}
-                </Routes>
-                <h1>LE TITRE</h1>
-                <Post />
-                <Footer />
-            </Router>
-        </>
-    );
-}
+
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home/>
+    },
+    {
+      path: "/search",
+      element: <SearchPage />
+    }
+  ])
+
+
+    /* console.log('app', array[0].original_title); */
+  return (
+    <>
+        <RouterProvider router={router} />
+
+    </>
+  );
+
+
 export default App;
