@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "./post.css";
 function CreatePost({ onPostCreated }) {
   const apiUrl =
     "https://social-network-api.osc-fr1.scalingo.io/serial-viewer/post";
