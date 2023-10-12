@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Profile.css";
 
 function Profile() {
@@ -9,12 +9,75 @@ function Profile() {
   const [occupation, setOccupation] = useState("Dealer");
   const [edit, setEdit] = useState(false);
 
+  async function getDataProfil() {
+    const options = {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "bearer" + localStorage.getItem("token"),
+      },
+    };
+
+    const response = await fetch(
+      // mettre le lien de notre api scalingo
+      options
+    );
+    const data = await response.json();
+    setFirstName(data.firstName);
+    setLastName(data.lastName);
+    setEmail(data.email);
+    setAge(data.age);
+    setOccupation(data.occupation);
+
+    console.log(data);
+  }
+
+  useEffect(() => {
+    getDataProfil();
+  }, []);
+
+  async function updateDataProfil() {
+    const options = {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "bearer" + localStorage.getItem("token"),
+      },
+      body: JSON.stringify({
+        firstname: firstName,
+        lastname: lastName,
+        email: email,
+        age: age,
+        occupation: occupation,
+      }),
+    };
+    const response = await fetch(
+      // lien scalingo de notre api
+      options
+    );
+    const data = await response.json();
+    console.log(data);
+  }
+
   function handleClickEdit() {
     if (edit) {
       // fonctionpourupdate();
     }
     setEdit(!edit);
   }
+
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (user) {
+      setFirstName(user.firstName);
+      setLastName(user.lastName);
+      setEmail(user.email);
+      setAge(user.age);
+      setOccupation(user.occupation);
+    } else {
+      getDataProfil();
+    }
+  }, []);
 
   return (
     <>
