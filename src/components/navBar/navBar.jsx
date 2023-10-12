@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import './navBar.css'
 
+
+
 function NavBar(props){
-    console.log(props.tableu);
+    /* console.log(props.tableu[0]); */
     return (
         <div className="nav" >
             <nav className="home">
