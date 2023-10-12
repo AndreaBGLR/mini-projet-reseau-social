@@ -2,11 +2,11 @@ import { useState } from "react";
 import "./Profile.css";
 
 function Profile() {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [age, setAge] = useState("");
-  const [occupation, setOccupation] = useState("");
+  const [firstName, setFirstName] = useState("Dubois");
+  const [lastName, setLastName] = useState("Jean");
+  const [email, setEmail] = useState("jeandubois@gmail.com");
+  const [age, setAge] = useState("75");
+  const [occupation, setOccupation] = useState("Dealer");
   const [edit, setEdit] = useState(false);
 
   function handleClickEdit() {
@@ -21,38 +21,44 @@ function Profile() {
       {edit === false ? (
         <>
           {/* navbar */}
-          <div className="profileBanner"></div>
-
-          <h1>Profil d'utilisateur</h1>
 
           <div className="profileContainer">
-            <label htmlFor="">Nom :</label>
-            <div>{lastName}</div>
+            <h2>Mon Profil d'utilisateur</h2>
+            <div className="profileLine2">
+              <label htmlFor="">Nom : </label>
+              <div>{lastName}</div>
+            </div>
 
-            <label htmlFor="">Prénom :</label>
-            <div>{firstName}</div>
+            <div className="profileLine2">
+              <label htmlFor="">Prénom:</label>
+              <div>{firstName}</div>
+            </div>
 
-            <label htmlFor="">Âge :</label>
-            <div>{age}</div>
+            <div className="profileLine2">
+              <label htmlFor="">Âge:</label>
+              <div>{age}</div>
+            </div>
 
-            <label htmlFor="">Occupation :</label>
-            <div>{occupation}</div>
+            <div className="profileLine2">
+              <label htmlFor="">Occupation: </label>
+              <div>{occupation}</div>
+            </div>
 
-            <label htmlFor="">Email :</label>
-            <div>{email}</div>
-
-            <button className="editButton" onClick={handleClickEdit}>
-              Modifier
-            </button>
+            <div className="profileLine2">
+              <label htmlFor="">Email: </label>
+              <div>{email}</div>
+            </div>
+            <div className="buttonStyle">
+              <button className="editButton" onClick={handleClickEdit}>
+                Modifier
+              </button>
+            </div>
           </div>
         </>
       ) : edit === true ? (
         <>
-          <div className="profileBanner"></div>
-
-          <h1>Profil d'utilisateur</h1>
-
-          <div className="profileContainer">
+          <div className="editProfileContainer">
+            <h2> Modifier Mon Profil d'utilisateur</h2>
             <label htmlFor="">Nom :</label>
             <input
               type="text"
@@ -92,9 +98,11 @@ function Profile() {
               onChange={(e) => setEmail(e.target.value)}
               className="formEdit"
             />
-            <button className="editButton" onClick={handleClickEdit}>
-              Valider
-            </button>
+            <div className="buttonStyle">
+              <button className="editButton" onClick={handleClickEdit}>
+                Valider
+              </button>
+            </div>
           </div>
         </>
       ) : (
@@ -103,3 +111,5 @@ function Profile() {
     </>
   );
 }
+
+export default Profile;
