@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./searchBar.css";
 
 const apiKey = "cff2dc83"; // clé API OMDB correcte
 const apiUrl = "http://www.omdbapi.com/";
