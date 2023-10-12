@@ -1,0 +1,10 @@
+.card {
+    height: 90%;
+    width: 90%;
+    background-color: deepskyblue;
+}
+.cardText{
+    height: 100%;
+    width: 100%;
+    display: none;
+}

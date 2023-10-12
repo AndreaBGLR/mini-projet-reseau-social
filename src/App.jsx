@@ -1,33 +1,55 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import SearchPage from './components/searchPage/SearchPage';
+import Home from './components/home/Home';
+
+
+// tableau test sergio
+
+
 
 function App() {
   const [count, setCount] = useState(0)
+  const [array ,setArray] = useState([{  
+    "poster_path": "/IfB9hy4JH1eH6HEfIgIGORXi5h.jpg",  
+    "adult": false,  
+    "overview": "Jack Reacher must uncover the truth behind a major government conspiracy in order to clear his name. On the run as a fugitive from the law, Reacher uncovers a potential secret from his past that could change his life forever.",  
+    "release_date": "2016-10-19",  
+    "genre_ids": [  
+      53,  
+      28,  
+      80,  
+      18,  
+      9648  
+    ],  
+    "id": 343611,  
+    "original_title": "Jack Reacher: Never Go Back",  
+    "original_language": "en",  
+    "title": "Jack Reacher: Never Go Back",  
+    "backdrop_path": "/4ynQYtSEuU5hyipcGkfD6ncwtwz.jpg",  
+    "popularity": 26.818468,  
+    "vote_count": 201,  
+    "video": false,  
+    "vote_average": 4.19  
+  }])
 
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home/>
+    },
+    {
+      path: "/search",
+      element: <SearchPage tableau={array} />
+    }
+  ])
+
+
+    /* console.log('app', array); */
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <RouterProvider router={router} />
     </>
   )
 }
