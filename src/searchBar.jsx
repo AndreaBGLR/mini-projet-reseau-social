@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const apiKey = "cff2dc83"; // Assurez-vous que ceci est votre clé API OMDB correcte
+const apiKey = "cff2dc83"; // clé API OMDB correcte
 const apiUrl = "http://www.omdbapi.com/";
 const socialApiUrl =
     "https://social-network-api.osc-fr1.scalingo.io/serial-viewer/";
@@ -16,7 +16,7 @@ function SearchBar() {
                 if (data.Response === "True") {
                     setSearchResults(data.Search);
 
-                    // Envoyer les résultats de recherche à notre API
+                    // Envoyer les résultats de recherche à votre API
                     sendResultsToSocialApi(data.Search);
                 } else {
                     setSearchResults([]);
@@ -37,7 +37,7 @@ function SearchBar() {
         })
             .then((response) => response.json())
             .then((data) => {
-                // Traiter la réponse de votre API ici si nécessaire
+                // réponse de votre API ici si nécessaire
             })
             .catch((error) => {
                 console.error(
