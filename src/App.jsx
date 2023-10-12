@@ -27,7 +27,7 @@ function App() {
     /* console.log('app', array[0].original_title); */
   return (
     <>
-      <RouterProvider router={router} />
+        <RouterProvider router={router} />
     </>
   )
 }
