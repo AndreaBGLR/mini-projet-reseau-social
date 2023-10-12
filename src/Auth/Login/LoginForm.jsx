@@ -33,12 +33,10 @@ function LoginForm() {
 
         const data = await response.json();
 
-        // Stocker les informations de connexion dans le localStorage
-        localStorage.setItem("email", email);
-        localStorage.setItem("password", password);
-        localStorage.setItem("token", data.token);
-
         if (data.success) {
+            localStorage.setItem("email", email);
+            localStorage.setItem("password", password);
+            localStorage.setItem("token", data.token);
             navigate("/home"); // Rediriger vers la page d'accueil si la connexion réussit
         } else {
             alert("Identifiant ou mot de passe incorrect, veuillez réessayer");
