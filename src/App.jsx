@@ -3,14 +3,14 @@ import './App.css'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import SearchPage from './components/searchPage/SearchPage';
 import Home from './components/home/Home';
+import Post from "./assets/post";
+import React from "react";
 
+import LoginForm from "./Auth/Login/LoginForm";
+import Register from "./Auth/Register/Register";
+import Logout from "./Auth/Logout/Logout";
+import Footer from "./Footer/Footer";
 
-// tableau test sergio
-
-
-
-function App() {
-  const [count, setCount] = useState(0)
 
   const router = createBrowserRouter([
     {
@@ -28,8 +28,9 @@ function App() {
   return (
     <>
         <RouterProvider router={router} />
-    </>
-  )
-}
 
-export default App
+    </>
+  );
+
+
+export default App;
