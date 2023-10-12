@@ -1,63 +1,39 @@
-import { useEffect, useState } from "react";
+import React, { useState } from "react";
 
-function Post() {
+function CreatePost({ onPostCreated }) {
   const apiUrl =
     "https://social-network-api.osc-fr1.scalingo.io/serial-viewer/post";
-  const [post, setPost] = useState("");
-  const [posts, setPosts] = useState([]);
+  const [post, setPost] = useState({ title: "", content: "" });
 
-  function createPost() {
-    fetch(apiUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        title: "blablatitre",
-        content: "blablacontent",
-      }),
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`Erreur de réseau - ${response.status}`);
-        }
-        return response.json();
-      })
-      .then((data) => {
-        console.log("Nouveau post créé :", data);
-        fetchPosts();
-      })
-      .catch((error) => {
-        console.error("Erreur : " + error);
+  async function createPost() {
+    try {
+      const response = await fetch(apiUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "bearer token",
+        },
+        body: JSON.stringify(post),
       });
-  }
 
-  function fetchPosts() {
-    fetch(apiUrl)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`Erreur de réseau - ${response.status}`);
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setPosts(data);
-      })
-      .catch((error) => {
-        console.error("Erreur : " + error);
-      });
-  }
+      if (!response.ok) {
+        throw new Error(`Erreur de réseau - ${response.status}`);
+      }
 
-  useEffect(() => {
-    fetchPosts();
-  }, []);
+      const data = await response.json();
+      console.log("Nouveau post créé :", data);
+      onPostCreated();
+    } catch (error) {
+      console.error("Erreur : " + error);
+    }
+  }
 
   return (
     <div>
       <h2>Créer un post</h2>
       <form>
         <label>
-          De quoi veut tu parler?
+          De quoi veux-tu parler?
           <input
             placeholder="Titre du post"
             type="text"
@@ -67,7 +43,7 @@ function Post() {
         </label>
         <br />
         <label>
-          Dit moi tout BG
+          Dis-moi tout BG
           <textarea
             placeholder="Contenu du post"
             value={post.content}
@@ -79,18 +55,8 @@ function Post() {
           Créer le Post
         </button>
       </form>
-
-      <h2>Posts Existants</h2>
-      <ul>
-        {posts.map((p) => (
-          <li key={p.id}>
-            <h3>{p.title}</h3>
-            <p>{p.content}</p>
-          </li>
-        ))}
-      </ul>
     </div>
   );
 }
 
-export default Post;
+export default CreatePost;

@@ -1,0 +1,105 @@
+/* Styles for the entire component */
+body {
+  background: url("https://th.bing.com/th/id/OIP.2k_D3JkPM7ngSruzPl9ZFQHaE8?w=293&h=196&c=7&r=0&o=5&pid=1.7")
+    fixed; /* Remplacez par l'URL de votre image de galaxie avec des paillettes */
+  background-size: cover;
+  color: #fff;
+  font-family: "Arial", sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Ajoute une opacité au contenu pour le démarquer de l'arrière-plan */
+  border-radius: 10px;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 20px 0;
+  color: #00ccff; /* Bleu électrique */
+}
+
+/* Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Ajoute une opacité au formulaire pour le démarquer de l'arrière-plan */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+label {
+  font-size: 18px;
+  margin: 5px 0;
+  color: #fff;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 2px solid #00ccff; /* Bleu électrique */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Ajoutez une opacité aux champs de saisie */
+  color: #fff;
+}
+
+button {
+  background-color: #00ccff; /* Bleu électrique */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+button:hover {
+  background-color: #0088cc; /* Shade of blue on hover */
+}
+
+/* List of existing posts */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 20px 0;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Ajoutez une opacité aux éléments de la liste */
+  border: 1px solid #00ccff; /* Bleu électrique */
+  padding: 10px;
+  border-radius: 10px;
+}
+
+h3 {
+  font-size: 20px;
+  color: #00ccff; /* Bleu électrique */
+}
+
+p {
+  font-size: 16px;
+  color: #fff;
+}
