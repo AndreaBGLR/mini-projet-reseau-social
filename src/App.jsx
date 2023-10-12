@@ -8,11 +8,13 @@ import LoginForm from "./Auth/Login/LoginForm";
 import Register from "./Auth/Register/Register";
 import Logout from "./Auth/Logout/Logout";
 import Footer from "./Footer/Footer";
+import SearchBar from "./searchBar";
 
 function App() {
     return (
         <>
             <Router>
+                <SearchBar />
                 <Routes>
                     <Route path="/" element={<LoginForm />} />
                     <Route path="/Register" element={<Register />} />
