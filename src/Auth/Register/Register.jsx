@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Register.css";
+import Footer from "../../Footer/Footer";
 
 function Register() {
     const [firstName, setFirstName] = useState("");
@@ -48,7 +49,7 @@ function Register() {
                 <div className="container">
                     <h1 className="pageTitle">Création de Compte</h1>
                     <form action="" method="post">
-                        <div className="field">
+                        <div className="identifiant">
                             <label htmlFor="">Nom</label>
                             <input
                                 type="text"
@@ -57,7 +58,7 @@ function Register() {
                                 onChange={(e) => setFirstName(e.target.value)}
                             />
                         </div>
-                        <div className="field">
+                        <div className="identifiant">
                             <label htmlFor="">Prénom</label>
                             <input
                                 type="text"
@@ -66,7 +67,7 @@ function Register() {
                                 onChange={(e) => setLastName(e.target.value)}
                             />
                         </div>
-                        <div className="field">
+                        <div className="identifiant">
                             <label htmlFor="">Email</label>
                             <input
                                 type="email"
@@ -75,7 +76,7 @@ function Register() {
                                 onChange={(e) => setEmail(e.target.value)}
                             />
                         </div>
-                        <div className="field">
+                        <div className="identifiant">
                             <label htmlFor="">Mot de Passe</label>
                             <input
                                 type="password"
@@ -93,6 +94,7 @@ function Register() {
                     </form>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 }

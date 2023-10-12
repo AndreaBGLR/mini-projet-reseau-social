@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Login.css";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Footer from "../../Footer/Footer";
 import { useNavigate } from "react-router-dom"; // hook pour rediriger vers une page
 
 function LoginForm() {
@@ -54,7 +54,7 @@ function LoginForm() {
             <div className="middle">
                 <div className="container">
                     <h1 className="pageTitle">Connexion</h1>
-                    <div className="field">
+                    <div className="identifiant">
                         <label htmlFor="email">Identifiant</label>
                         <input
                             type="email"
@@ -64,7 +64,7 @@ function LoginForm() {
                             className="form-control"
                         />
                     </div>
-                    <div className="field">
+                    <div className="identifiant">
                         <label htmlFor="password">Mot de passe</label>
                         <input
                             type="password"
@@ -82,6 +82,7 @@ function LoginForm() {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 }
