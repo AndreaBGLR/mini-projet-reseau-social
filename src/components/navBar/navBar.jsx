@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./navBar.css";
 
-function NavBar(props){
+function NavBar(props) {
     /* console.log(props.tableu[0]); */
     return (
         <div className="nav">
@@ -14,7 +14,7 @@ function NavBar(props){
                 </div>
             </div>
             <nav className="home lien">
-                <Link to={"/src/components/home/Home.jsx"}>Accueil</Link>
+                <Link to={"/"}>Accueil</Link>
             </nav>
             <nav className="login lien">
                 <Link to={"/src/Auth/Login/LoginForm.jsx"}>Connexion</Link>
