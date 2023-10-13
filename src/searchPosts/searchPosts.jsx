@@ -93,8 +93,8 @@ function SearchPosts() {
                 <div>
                     <h2>Résultats de la recherche :</h2>
                     <ul>
-                        {filteredPosts.map((result, index) => (
-                            <li key={index}>{result.title}</li>
+                        {filteredPosts.map((result) => (
+                            <li key={result.id}>{result.title}</li>
                         ))}
                     </ul>
                 </div>
