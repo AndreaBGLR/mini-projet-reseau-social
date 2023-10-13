@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import Footer from "../../Footer/Footer";
 
 function Logout() {
     const navigate = useNavigate();

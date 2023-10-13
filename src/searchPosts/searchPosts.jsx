@@ -6,15 +6,42 @@ function SearchPosts() {
     const [filteredPosts, setFilteredPosts] = useState([]);
     const [loading, setLoading] = useState(false);
 
+    // Fonction de vérification du token
+    const isTokenValid = (token) => {
+        return token === storedToken;
+    };
+
     const fetchAllPosts = () => {
         setLoading(true);
         fetch(
-            "https://social-network-api.osc-fr1.scalingo.io/serial-viewer/post"
+            "https://social-network-api.osc-fr1.scalingo.io/serial-viewer/post",
+            {
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: "bearer token",
+                },
+            }
         )
-            .then((response) => response.json())
+            .then((response) => {
+                if (response.status === 401) {
+                    // erreur d'authentification
+                    throw new Error("Non autorisé");
+                }
+                if (response.status !== 200) {
+                    // autres erreurs HTTP
+                    throw new Error("Erreur HTTP " + response.status);
+                }
+                return response.json();
+            })
             .then((data) => {
-                setAllPosts(data);
-                setLoading(false);
+                // Vérifier que le token est correct
+                if (isTokenValid(yourAccessToken)) {
+                    setAllPosts(data);
+                    setLoading(false);
+                } else {
+                    // Gérer erreur de token incorrect
+                    throw new Error("Token invalide");
+                }
             })
             .catch((error) => {
                 console.error("Une erreur s'est produite :", error);
@@ -31,13 +58,22 @@ function SearchPosts() {
     }, [searchTerm, allPosts]);
 
     const filterPosts = () => {
-        const filtered = allPosts.filter((post) => {
-            return (
-                post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                post.content.toLowerCase().includes(searchTerm.toLowerCase())
-            );
-        });
-        setFilteredPosts(filtered);
+        if (Array.isArray(allPosts)) {
+            const filtered = allPosts.filter((post) => {
+                return (
+                    post.title
+                        .toLowerCase()
+                        .includes(searchTerm.toLowerCase()) ||
+                    post.content
+                        .toLowerCase()
+                        .includes(searchTerm.toLowerCase())
+                );
+            });
+            setFilteredPosts(filtered);
+        } else {
+            // allPosts n'est pas un tableau, définir filteredPosts sur un tableau vide.
+            setFilteredPosts([]);
+        }
     };
 
     return (
@@ -57,8 +93,8 @@ function SearchPosts() {
                 <div>
                     <h2>Résultats de la recherche :</h2>
                     <ul>
-                        {filteredPosts.map((result, index) => (
-                            <li key={index}>{result.title}</li>
+                        {filteredPosts.map((result) => (
+                            <li key={result.id}>{result.title}</li>
                         ))}
                     </ul>
                 </div>
