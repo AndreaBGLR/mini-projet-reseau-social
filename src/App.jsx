@@ -4,8 +4,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import SearchPage from "./components/searchPage/SearchPage";
 import Home from "./components/home/Home";
 
+import Post from "./assets/post";
 import React from "react";
-
+import SearchBar from "./searchBar";
 import CreatePost from "./assets/post";
 import RenderPost from "./assets/affichagepost";
 
@@ -25,7 +26,7 @@ function App() {
     },
     {
       path: "/renderPost",
-      element: <RenderPost />,
+      element: <RecupPost />,
     },
   ]);
 

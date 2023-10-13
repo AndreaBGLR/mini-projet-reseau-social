@@ -1,36 +1,32 @@
 import { Link } from "react-router-dom";
-import './navBar.css'
+import "./navBar.css";
 
-
-
-function NavBar(props){
+function NavBar(props) {
     /* console.log(props.tableu[0]); */
     return (
-        <div className="nav" >
+        <div className="nav">
             <div className="idSite">
                 <div className="titre">
                     <p>Serial viewer</p>
                 </div>
             </div>
 
-
-
             <nav className="home lien">
-                <Link to={'/'}> Accueil</Link>
+                <Link to={"/"}> Accueil</Link>
             </nav>
 
             <nav className="search lien">
-                <Link to={'/search'}>chercher</Link>
+                <Link to={"/search"}>chercher</Link>
             </nav>
 
             <nav className="render lien">
-                <Link to={'/renderPost'}>render</Link>
+                <Link to={"/renderPost"}>render</Link>
             </nav>
 
             <nav className="create lien">
-                <Link to={'/createPost'}>create</Link>
+                <Link to={"/createPost"}>create</Link>
             </nav>
         </div>
-    )
+    );
 }
-export default NavBar
+export default NavBar;

@@ -1,12 +1,13 @@
-import NavBar from "../navBar/navBar"
-import './home.css'
-import ApiFilm from "../api/apiFilm"
+import NavBar from "../navBar/navBar";
+import "./home.css";
+import ApiFilm from "../api/apiFilm";
+import LoginForm from "../../Auth/Login/LoginForm";
 
 function Home(props) {
     return (
         <div className="homeContainer">
             <div className="navContainer">
-                <NavBar/>
+                <NavBar />
             </div>
 
             <section>
@@ -36,7 +37,6 @@ function Home(props) {
 
 
         </div>
-
-    )
+    );
 }
-export default Home
+export default Home;
