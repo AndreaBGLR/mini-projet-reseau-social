@@ -36,6 +36,7 @@ function Profile() {
     getDataProfil();
   }, []);
 
+  // POSSIBLE TO RENDER ALL WITH PUT NEED TO DO THE UPDATE
   async function updateDataProfil() {
     const options = {
       method: "PUT",
@@ -61,7 +62,7 @@ function Profile() {
 
   function handleClickEdit() {
     if (edit) {
-      // fonctionpourupdate();
+      updateDataProfil();
     }
     setEdit(!edit);
   }
