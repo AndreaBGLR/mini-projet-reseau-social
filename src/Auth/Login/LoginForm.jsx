@@ -37,14 +37,14 @@ function LoginForm() {
             localStorage.setItem("email", email);
             localStorage.setItem("password", password);
             localStorage.setItem("token", data.token);
-            navigate("/home"); // Rediriger vers la page d'accueil si la connexion réussit
+            navigate("/"); // Rediriger vers la page d'accueil si la connexion réussit
         } else {
             alert("Identifiant ou mot de passe incorrect, veuillez réessayer");
         }
     }
 
     function goToRegister() {
-        navigate("/register"); // Fonction pour rediriger vers la page d'inscription
+        navigate("/src/Auth/Register/Register.jsx"); // Fonction pour rediriger vers la page d'inscription
     }
 
     return (
