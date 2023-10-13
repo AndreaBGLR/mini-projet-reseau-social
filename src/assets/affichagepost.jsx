@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./post.css";
-import CreatePost from "./post";
 
 function RecupPosts() {
   const apiUrlRecup =
