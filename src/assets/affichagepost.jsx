@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./post.css";
+import NavBar from "../Components/navBar/navBar";
 
 function RecupPosts() {
   const apiUrlRecup =
@@ -31,6 +32,7 @@ function RecupPosts() {
 
   return (
     <div>
+      <NavBar />
       <h2>Posts Existants</h2>
       <ul>
         {posts?.map((post) => (
