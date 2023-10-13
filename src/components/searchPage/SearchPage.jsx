@@ -1,18 +1,15 @@
 import Card from "../card/card";
 import NavBar from "../navBar/navBar";
-import './searchPage.css'
+import "./searchPage.css";
 import ApiFilm from "../api/apiFilm";
 import { useState } from "react";
-import SearchBar from "../searchBar/searchBar";
-
-
 
 const apiKey = "cff2dc83"; // Assurez-vous que ceci est votre clé API OMDB correcte
 const apiUrl = "http://www.omdbapi.com/";
-const socialApiUrl ="https://social-network-api.osc-fr1.scalingo.io/serial-viewer/";
+const socialApiUrl =
+    "https://social-network-api.osc-fr1.scalingo.io/serial-viewer/";
 
-
-function SearchPage (props){
+function SearchPage(props) {
     /* console.log('search', props.tableau.original_title); */
 
     const [searchTerm, setSearchTerm] = useState("");
@@ -56,21 +53,18 @@ function SearchPage (props){
             });
     };
 
-
-
-/* console.log('search' ,array2); */
+    /* console.log('search' ,array2); */
     return (
         <div className="alpha">
             <div className="container">
                 <div className="navContainer">
-                    <NavBar/>
+                    <NavBar />
                 </div>
-                
-                <div className="autre">
 
+                <div className="autre">
                     <div className="redimention">
                         <div className="searchBar">
-    {/*                         <div className="genre">
+                            {/*                         <div className="genre">
                                 <select name="genreMovie" id="genreMovie">
                                     <option value="">-- Genre de film --</option>
                                     <option>Comédie</option>
@@ -81,31 +75,35 @@ function SearchPage (props){
                                     type="text"
                                     placeholder="Entrez un nom de film"
                                     value={searchTerm}
-                                    onChange={(e) => setSearchTerm(e.target.value)}
+                                    onChange={(e) =>
+                                        setSearchTerm(e.target.value)
+                                    }
                                     className="inputSearch"
                                 />
-                                <button onClick={searchMovies} className="buttonSearch">Rechercher</button>
+                                <button
+                                    onClick={searchMovies}
+                                    className="buttonSearch"
+                                >
+                                    Rechercher
+                                </button>
                             </div>
-
                         </div>
 
                         <div className="cardContainer">
-
-                            {searchResults? (searchResults.map((valeur, index) => (
-                                <Card tableau={valeur} index={index} key={index}/>
-                            ))) :
-                                (console.log("salut"))}
+                            {searchResults
+                                ? searchResults.map((valeur, index) => (
+                                      <Card
+                                          tableau={valeur}
+                                          index={index}
+                                          key={index}
+                                      />
+                                  ))
+                                : console.log("salut")}
                         </div>
                     </div>
-
-
                 </div>
-
-
-
-            </div>            
+            </div>
         </div>
-
-    )
+    );
 }
-export default SearchPage
+export default SearchPage;
