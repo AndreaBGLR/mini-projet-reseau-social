@@ -4,7 +4,7 @@ import CreatePost from "./post";
 
 function RecupPosts() {
   const apiUrlRecup =
-    "https://social-network-api.osc-fr1.scalingo.io/serial-viewer/posts?page=1&limit=6";
+    "https://social-network-api.osc-fr1.scalingo.io/serial-viewer/posts?page=1&limit=10";
   const [posts, setPosts] = useState([]);
   async function recupPosts() {
     try {
@@ -20,8 +20,8 @@ function RecupPosts() {
       }
 
       const dataget = await response.json();
-      console.log(dataget);
-      setPosts(dataget);
+      console.log(dataget.posts);
+      setPosts(dataget.posts);
     } catch (error) {
       console.error("Erreur : " + error);
     }
@@ -34,7 +34,7 @@ function RecupPosts() {
     <div>
       <h2>Posts Existants</h2>
       <ul>
-        {posts?.dataget?.map((post) => (
+        {posts?.map((post) => (
           <li key={post.id}>
             <h3>{post.title}</h3>
             <p>{post.content}</p>
