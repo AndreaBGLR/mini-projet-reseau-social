@@ -1,10 +1,8 @@
 import Card from "../card/card";
 import NavBar from "../navBar/navBar";
-import './searchPage.css'
+import "./searchPage.css";
 import ApiFilm from "../api/apiFilm";
 import { useState } from "react";
-
-
 
 const apiKey = "cff2dc83"; // Assurez-vous que ceci est votre clé API OMDB correcte
 const apiUrl = "http://www.omdbapi.com/";
@@ -101,8 +99,10 @@ function SearchPage (props){
 
 
             </div>            
-        </div>
 
-    )
+        </div>
+      </div>
+    </div>
+  );
 }
-export default SearchPage
+export default SearchPage;
