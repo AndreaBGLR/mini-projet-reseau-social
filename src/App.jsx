@@ -1,44 +1,40 @@
-
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import SearchPage from './components/searchPage/SearchPage';
-import Home from './components/home/Home';
+import SearchPage from "./components/searchPage/SearchPage";
+import Home from "./components/home/Home";
 
-import Post from "./assets/post";
 import React from "react";
-import SearchBar from "./searchBar";
-import CreatePost from "./assets/post"
-import RenderPost from "./assets/affichagepost"
 
+import CreatePost from "./assets/post";
+import RenderPost from "./assets/affichagepost";
 
-function App (){
+function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Home/>
+      element: <Home />,
     },
     {
       path: "/search",
-      element: <SearchPage />
+      element: <SearchPage />,
     },
     {
       path: "/createPost",
-      element: <CreatePost />
+      element: <CreatePost />,
     },
     {
       path: "/renderPost",
-      element: <RenderPost />
-    }
-  ])
+      element: <RenderPost />,
+    },
+  ]);
 
-
-    /* console.log('app', array[0].original_title); */
+  /* console.log('app', array[0].original_title); */
   return (
     <>
-        <RouterProvider router={router} />
+      <RouterProvider router={router} />
     </>
-  )
-  }
+  );
+}
 
 export default App;
