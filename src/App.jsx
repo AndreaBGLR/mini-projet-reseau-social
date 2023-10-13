@@ -8,6 +8,8 @@ import Home from './components/home/Home';
 import Post from "./assets/post";
 import React from "react";
 import SearchBar from "./searchBar";
+import CreatePost from "./assets/post"
+import RenderPost from "./assets/affichagepost"
 
 
 function App (){
@@ -19,6 +21,14 @@ function App (){
     {
       path: "/search",
       element: <SearchPage />
+    },
+    {
+      path: "/createPost",
+      element: <CreatePost />
+    },
+    {
+      path: "/renderPost",
+      element: <RenderPost />
     }
   ])
 

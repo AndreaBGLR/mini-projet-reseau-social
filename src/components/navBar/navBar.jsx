@@ -22,6 +22,14 @@ function NavBar(props){
             <nav className="search lien">
                 <Link to={'/search'}>chercher</Link>
             </nav>
+
+            <nav className="render lien">
+                <Link to={'/renderPost'}>render</Link>
+            </nav>
+
+            <nav className="create lien">
+                <Link to={'/createPost'}>create</Link>
+            </nav>
         </div>
     )
 }

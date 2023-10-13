@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./post.css";
+import NavBar from "../components/navBar/navBar";
 function CreatePost({ onPostCreated }) {
   const apiUrl =
     "https://social-network-api.osc-fr1.scalingo.io/serial-viewer/post";
@@ -30,6 +31,7 @@ function CreatePost({ onPostCreated }) {
 
   return (
     <div>
+      <NavBar/>
       <h2>Créer un post</h2>
       <form>
         <label>
