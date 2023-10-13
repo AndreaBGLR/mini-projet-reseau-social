@@ -1,13 +1,13 @@
 /* Styles for the entire component */
 body {
-  background: url("https://th.bing.com/th/id/OIP.2k_D3JkPM7ngSruzPl9ZFQHaE8?w=293&h=196&c=7&r=0&o=5&pid=1.7")
-    fixed; /* Remplacez par l'URL de votre image de galaxie avec des paillettes */
+/*   background: url("https://th.bing.com/th/id/OIP.2k_D3JkPM7ngSruzPl9ZFQHaE8?w=293&h=196&c=7&r=0&o=5&pid=1.7")
+    fixed;  *//* Remplacez par l'URL de votre image de galaxie avec des paillettes */
   background-size: cover;
   color: #fff;
   font-family: "Arial", sans-serif;
 }
 
-.container {
+/* .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
@@ -16,9 +16,9 @@ body {
     0,
     0,
     0.7
-  ); /* Ajoute une opacité au contenu pour le démarquer de l'arrière-plan */
+  ); 
   border-radius: 10px;
-}
+} *//* Ajoute une opacité au contenu pour le démarquer de l'arrière-plan */
 
 h2 {
   font-size: 24px;
@@ -47,21 +47,21 @@ label {
   color: #fff;
 }
 
-input,
+/* input,
 textarea {
   width: 100%;
   padding: 10px;
   margin: 5px 0;
-  border: 2px solid #00ccff; /* Bleu électrique */
+  border: 2px solid #00ccff; 
   background-color: rgba(
     0,
     0,
     0,
     0.7
-  ); /* Ajoutez une opacité aux champs de saisie */
+  ); 
   color: #fff;
 }
-
+ */
 button {
   background-color: #00ccff; /* Bleu électrique */
   color: #fff;

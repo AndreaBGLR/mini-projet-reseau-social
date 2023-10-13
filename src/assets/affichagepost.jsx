@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import NavBar from "../components/navBar/navBar";
 
 function RenderPosts() {
   const apiUrl =
@@ -26,6 +27,7 @@ function RenderPosts() {
 
   return (
     <div>
+      <NavBar/>
       <h2>Posts Existants</h2>
       <ul>
         {posts.map((p) => (
