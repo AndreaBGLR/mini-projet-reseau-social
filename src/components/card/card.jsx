@@ -18,6 +18,9 @@ function Card(props){
                 <div>
                     {props.tableau.Year}
                 </div>
+                <div>
+                    {props.tableau.Type}
+                </div>
 
             </div>
         </div>

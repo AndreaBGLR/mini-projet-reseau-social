@@ -32,7 +32,9 @@ function SearchPage (props){
             })
             .catch((error) => {
                 console.error("Une erreur s'est produite :", error);
-            });
+        });
+        setSearchTerm('')
+
     };
 
     const sendResultsToSocialApi = (results) => {
@@ -69,12 +71,6 @@ function SearchPage (props){
 
                     <div className="redimention">
                         <div className="searchBar">
-    {/*                         <div className="genre">
-                                <select name="genreMovie" id="genreMovie">
-                                    <option value="">-- Genre de film --</option>
-                                    <option>Comédie</option>
-                                </select>
-                            </div> */}
                             <div className="searchBarContainer">
                                 <input
                                     type="text"
@@ -82,6 +78,8 @@ function SearchPage (props){
                                     value={searchTerm}
                                     onChange={(e) => setSearchTerm(e.target.value)}
                                     className="inputSearch"
+                                    onKeyDown={(event) => {if (event.key == 'Enter') {
+                                        searchMovies(searchTerm)}}}
                                 />
                                 <button onClick={searchMovies} className="buttonSearch">Rechercher</button>
                             </div>
