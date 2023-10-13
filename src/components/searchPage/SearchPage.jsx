@@ -3,7 +3,6 @@ import NavBar from "../navBar/navBar";
 import './searchPage.css'
 import ApiFilm from "../api/apiFilm";
 import { useState } from "react";
-import SearchBar from "../searchBar/searchBar";
 
 
 

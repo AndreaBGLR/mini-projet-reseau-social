@@ -7,7 +7,6 @@ import Home from './components/home/Home';
 
 import Post from "./assets/post";
 import React from "react";
-import SearchBar from "./searchBar";
 import CreatePost from "./assets/post"
 import RenderPost from "./assets/affichagepost"
 

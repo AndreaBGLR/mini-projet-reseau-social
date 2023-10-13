@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import './navBar.css'
 
 
-
 function NavBar(props){
     /* console.log(props.tableu[0]); */
     return (
@@ -10,6 +9,9 @@ function NavBar(props){
             <div className="idSite">
                 <div className="titre">
                     <p>Serial viewer</p>
+                </div>
+                <div className="navImage">
+                    <img src={""} alt="logo" />
                 </div>
             </div>
 
