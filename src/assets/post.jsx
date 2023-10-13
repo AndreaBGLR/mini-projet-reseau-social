@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import "./post.css";
-import RenderPosts from "./affichagepost";
+import RecupPosts from "./affichagepost";
 
-function CreatePost({ onPostCreated }) {
+function CreatePost() {
   const apiUrl =
     "https://social-network-api.osc-fr1.scalingo.io/serial-viewer/post";
   const [post, setPost] = useState({ title: "", content: "" });
   const [token, setToken] = useState(localStorage.getItem("token"));
-
   async function createPost() {
     if (!token) {
       console.error("token pas recup");
@@ -18,7 +17,7 @@ function CreatePost({ onPostCreated }) {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: "bearer " + token,
+          Authorization: "Bearer " + token,
         },
         body: JSON.stringify(post),
       });
@@ -29,6 +28,7 @@ function CreatePost({ onPostCreated }) {
 
       const data = await response.json();
       console.log("Nouveau post créé :", data);
+      setPost({ title: "", content: "" });
     } catch (error) {
       console.error("Erreur : " + error);
     }
