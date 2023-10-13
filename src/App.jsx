@@ -10,7 +10,7 @@ import React from "react";
 import SearchBar from "./searchBar";
 
 
-
+function App (){
   const router = createBrowserRouter([
     {
       path: "/",
@@ -27,9 +27,8 @@ import SearchBar from "./searchBar";
   return (
     <>
         <RouterProvider router={router} />
-
     </>
-  );
-
+  )
+  }
 
 export default App;

@@ -1,12 +1,57 @@
 .homeContainer{
     background-color: #005fde;
     background-image: linear-gradient(90deg, #005fde 0%, #FC00FF 100%);     
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
 }
 
 .navContainer {
     height: 100vh;
     width: 15vw;
-    border: 2px solid white;
     background-color: black;
-    position: static;
+    position: fixed;
+}
+section{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+h1{
+    margin: 0;
+    font-size: 100px;
+    text-transform: uppercase;
+}
+
+.titreHome{
+    height: 100vh;
+    width: 85vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topFilm,
+.topSerie{
+    height: 100vh;
+    width: 85%;
+    gap: 2%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.affichageTop{
+    height: 60%;
+    width: 90%;
+    background-color: rgb(35, 35, 35);
+    border-radius: 25px;
+}
+.affichageList{
+    height: 30%;
+    width: 90%;
+    background-color: rgb(35, 35, 35);
+    border-radius: 25px;
 }
