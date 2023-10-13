@@ -1,20 +1,18 @@
 import { Link } from "react-router-dom";
-import './navBar.css'
+import "./navBar.css";
 
-
-
-function NavBar(props){
+function NavBar(props) {
     /* console.log(props.tableu[0]); */
     return (
-        <div className="nav" >
+        <div className="nav">
             <nav className="home">
-                <Link to={'/'}> Accueil</Link>
+                <Link to={"/"}> Accueil</Link>
             </nav>
 
             <nav className="search">
-                <Link to={'/search'}>chercher</Link>
+                <Link to={"/search"}>chercher</Link>
             </nav>
         </div>
-    )
+    );
 }
-export default NavBar
+export default NavBar;
