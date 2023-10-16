@@ -75,10 +75,11 @@ function RecupPosts() {
             <h3>{post.title}</h3>
             <p>{post.content}</p>
             <div>
+              {" "}
+              <h4>Commentaires : </h4>
               {post.comments?.map((com) => (
                 <p key={com.id}>{com.content}</p>
               ))}
-
               <div className="com">
                 <input
                   onChange={(e) => setCom(e.target.value)}
