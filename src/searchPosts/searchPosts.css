@@ -1,0 +1,47 @@
+/* SearchPosts.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.navbar {
+    background-color: #005fde;
+    color: white;
+    padding: 10px;
+    width: 20%; /* Largeur de la barre de navigation sur le côté */
+}
+
+.content {
+    flex: 1; /* Le contenu occupe l'espace restant au centre */
+    width: 50%; /* Largeur du contenu principal */
+    text-align: center;
+    padding: 20px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}

@@ -46,7 +46,10 @@ function Register() {
 
     return (
         <div>
-            <NavBar />
+            <div className="navContainer">
+                {" "}
+                <NavBar />
+            </div>
             <div>
                 <div className="container">
                     <h1 className="pageTitle">Création de Compte</h1>

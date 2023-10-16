@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import NavBar from "../components/navBar/navBar";
+import "./searchPosts.css";
 
 function SearchPosts() {
     const [searchTerm, setSearchTerm] = useState("");
@@ -76,7 +77,10 @@ function SearchPosts() {
 
     return (
         <div>
-            <NavBar />
+            <div className="navContainer">
+                {" "}
+                <NavBar />
+            </div>
             <h1>Recherche de Posts</h1>
             <div>
                 <input
