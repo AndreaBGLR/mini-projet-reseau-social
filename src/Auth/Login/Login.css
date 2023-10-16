@@ -1,0 +1,66 @@
+.connexion {
+  background-color: #005fde;
+  background-image: linear-gradient(90deg, #005fde 0%, #fc00ff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* .container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+} */
+
+.pageTitle {
+  font-size: 24px;
+  color: #005fde;
+  margin-bottom: 20px;
+}
+
+.identifiant {
+  margin: 10px 0;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.buttonValider {
+  margin: 20px 0;
+}
+
+.buttonValider button {
+  background-color: #005fde;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buttonRegister button {
+  background-color: #fc00ff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buttonRegister button:hover {
+  background-color: #ff3399;
+}
+
+/* Media query pour rendre la carte plus petite sur les petits écrans */
+@media (max-width: 768px) {
+  .container {
+    width: 80%;
+  }
+}

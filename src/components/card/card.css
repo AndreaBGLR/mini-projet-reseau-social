@@ -1,0 +1,37 @@
+.card {
+    height: 90%;
+    width: 90%;
+    border-radius: 15px;
+    overflow: hidden;
+   position: relative;
+}
+.cardText{
+    z-index: 2;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.cardImage{
+    height: 100%;
+    width: 100%;
+}
+.cardImage img {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+.card:hover .cardImage{
+    opacity: 0.5;
+}
+.card:hover .cardText{
+    opacity: 1;
+}
+
