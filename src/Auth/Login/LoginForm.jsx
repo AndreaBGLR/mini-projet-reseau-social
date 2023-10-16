@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Login.css";
 import Footer from "../../Footer/Footer";
+import NavBar from "../../components/navBar/navBar";
 import { useNavigate } from "react-router-dom"; // hook pour rediriger vers une page
 
 function LoginForm() {
@@ -48,35 +49,43 @@ function LoginForm() {
     }
 
     return (
-        <div className="connexion">
-            <div className="middle">
-                <div className="container">
-                    <h1 className="pageTitle">Connexion</h1>
-                    <div className="identifiant">
-                        <label htmlFor="email">Identifiant</label>
-                        <input
-                            type="email"
-                            id="email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            className="form-control"
-                        />
-                    </div>
-                    <div className="identifiant">
-                        <label htmlFor="password">Mot de passe</label>
-                        <input
-                            type="password"
-                            id="password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                            className="form-control"
-                        />
-                    </div>
-                    <div className="buttonValider">
-                        <button onClick={handleSubmit}>Valider</button>
-                    </div>
-                    <div className="buttonRegister">
-                        <button onClick={goToRegister}>Créer un Compte</button>
+        <div>
+            <div className="navContainer">
+                {" "}
+                <NavBar />
+            </div>
+            <div className="connexion">
+                <div className="middle">
+                    <div className="container">
+                        <h1 className="pageTitle">Connexion</h1>
+                        <div className="identifiant">
+                            <label htmlFor="email">Identifiant</label>
+                            <input
+                                type="email"
+                                id="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                className="form-control"
+                            />
+                        </div>
+                        <div className="identifiant">
+                            <label htmlFor="password">Mot de passe</label>
+                            <input
+                                type="password"
+                                id="password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                className="form-control"
+                            />
+                        </div>
+                        <div className="buttonValider">
+                            <button onClick={handleSubmit}>Valider</button>
+                        </div>
+                        <div className="buttonRegister">
+                            <button onClick={goToRegister}>
+                                Créer un Compte
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -5,3 +5,8 @@
     text-align: center;
     padding: 10px;
 }
+@media (max-width: 768px) {
+    .footer {
+        padding: 5px; /* Réduire l'espacement sur les écrans plus petits */
+    }
+}
