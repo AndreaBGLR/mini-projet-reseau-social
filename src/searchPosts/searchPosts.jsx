@@ -72,27 +72,29 @@ function SearchPosts() {
             <div className="navContainer">
                 <NavBar />
             </div>
-            <h1>Recherche de Posts</h1>
-            <div>
-                <input
-                    type="text"
-                    placeholder="Rechercher par titre ou contenu"
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                />
-            </div>
-            {loading ? (
-                <p>Chargement en cours...</p>
-            ) : (
+            <div className="recherche">
+                <h1>Recherche de Posts</h1>
                 <div>
-                    <h2>Résultats de la recherche :</h2>
-                    <ul>
-                        {filteredPosts.map((result) => (
-                            <li key={result.id}>{result.title}</li>
-                        ))}
-                    </ul>
+                    <input
+                        type="text"
+                        placeholder="Rechercher par titre ou contenu"
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                    />
                 </div>
-            )}
+                {loading ? (
+                    <p>Chargement en cours...</p>
+                ) : (
+                    <div>
+                        <h3>Résultats de la recherche :</h3>
+                        <ul>
+                            {filteredPosts.map((result) => (
+                                <li key={result.id}>{result.title}</li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
+            </div>
 
             <div className="pagination">
                 <button
