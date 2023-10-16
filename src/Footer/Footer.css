@@ -4,5 +4,9 @@
     color: white; /* Couleur du texte en blanc */
     text-align: center;
     padding: 10px;
-    margin-top: 90vh;
+}
+@media (max-width: 768px) {
+    .footer {
+        padding: 5px; /* Réduire l'espacement sur les écrans plus petits */
+    }
 }

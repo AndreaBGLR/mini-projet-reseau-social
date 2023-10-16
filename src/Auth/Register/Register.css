@@ -57,3 +57,16 @@ input {
 .buttonInscription:hover {
     background-color: #003d8f;
 }
+@media (max-width: 768px) {
+    .navContainer {
+        display: none; /* Masquer la navigation sur les écrans plus petits */
+    }
+
+    .container {
+        text-align: center; /* Centrer le contenu sur les écrans plus petits */
+    }
+
+    form {
+        width: 90%; /* Réduire la largeur du formulaire sur les écrans plus petits */
+    }
+}

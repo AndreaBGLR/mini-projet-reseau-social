@@ -41,3 +41,18 @@ button:hover {
     padding: 10px;
     margin-top: 100vh;
 }
+@media (max-width: 768px) {
+    .navContainer {
+        display: none; /* Masquer la navigation sur les écrans plus petits */
+    }
+
+    .deco {
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .deco {
+        padding: 10px; /* Réduire l'espacement sur les écrans plus petits */
+    }
+}

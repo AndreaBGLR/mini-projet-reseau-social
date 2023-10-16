@@ -1,5 +1,3 @@
-/* SearchPosts.css */
-
 .container {
     display: flex;
     flex-direction: column;
@@ -44,4 +42,21 @@ ul {
 li {
     font-size: 18px;
     margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; /* Réduire l'espacement sur les écrans plus petits */
+    }
+
+    .navbar {
+        width: 100%; /* Barre de navigation en plein écran sur les écrans plus petits */
+    }
+
+    .content {
+        width: 100%; /* Contenu principal en plein écran sur les écrans plus petits */
+    }
+
+    input[type="text"] {
+        margin-bottom: 10px; /* Réduire la marge sous le champ de recherche sur les écrans plus petits */
+    }
 }

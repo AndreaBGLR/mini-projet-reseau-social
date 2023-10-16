@@ -79,5 +79,20 @@ label {
     color: white; /* Couleur du texte en blanc */
     text-align: center;
     padding: 10px;
-    margin-top: 0;
+}
+@media (max-width: 768px) {
+    .connexion {
+        flex-direction: column; /* Passe à une disposition en colonne */
+        align-items: center;
+    }
+
+    .container {
+        width: 90%; /* Réduire la largeur du conteneur principal */
+    }
+}
+
+@media (max-width: 576px) {
+    .navContainer {
+        display: none; /* Masquer la navigation sur les écrans plus petits */
+    }
 }
