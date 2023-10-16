@@ -1,17 +1,17 @@
-.container{
+.container {
     display: flex;
     flex-direction: row;
     height: 100vh;
     width: 100%;
 }
 
-.autre{
+.autre {
     display: flex;
     flex-direction: column;
     width: 100%;
     align-items: flex-end;
 }
-.searchBar{
+.searchBar {
     width: 100%;
     height: 15%;
     background-color: #0053c3;
@@ -21,29 +21,29 @@
     justify-content: center;
     align-items: center;
 }
-.redimention{
+.redimention {
     width: 85%;
     height: 100%;
 }
 
-.cardContainer{
+.cardContainer {
     height: 85%;
     width: 100%;
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%; 
+    grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 50% 50% 50% 50%;
     align-items: center;
     justify-items: center;
     overflow: auto;
 }
-.searchBarContainer{
+.searchBarContainer {
     width: 90%;
     height: 40%;
     display: flex;
     flex-direction: row;
     gap: 5%;
 }
-.inputSearch{
+.inputSearch {
     height: 97%;
     width: 85%;
     border: none;
@@ -54,11 +54,36 @@
     background-color: rgba(0, 255, 255, 0);
 }
 
-.inputSearch:focus{
+.inputSearch:focus {
     outline: none;
 }
-.buttonSearch{
+.buttonSearch {
     height: 100%;
     width: 20%;
     border-radius: 5px;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Passage à une disposition en colonne sur les écrans plus petits */
+    }
+
+    .searchBarContainer {
+        flex-direction: column;
+        align-items: center; /* Centrer horizontalement sur les écrans plus petits */
+        gap: 10px; /* Augmentation de l'espacement entre les éléments */
+    }
+}
+
+@media (max-width: 576px) {
+    .searchBar {
+        height: auto; /* Hauteur automatique pour le contenu sur les écrans très petits */
+    }
+
+    .searchBarContainer {
+        width: 100%; /* Largeur maximale sur les écrans très petits */
+    }
+
+    .inputSearch {
+        width: 100%; /* Largeur maximale sur les écrans très petits */
+    }
 }
