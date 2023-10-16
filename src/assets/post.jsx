@@ -30,6 +30,7 @@ function CreatePost() {
       const data = await response.json();
       console.log("Nouveau post créé :", data);
       setPost({ title: "", content: "" });
+      alert("le post a été crée");
     } catch (error) {
       console.error("Erreur : " + error);
     }
