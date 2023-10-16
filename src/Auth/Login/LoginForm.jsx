@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Login.css";
 import Footer from "../../Footer/Footer";
+import NavBar from "../../components/navBar/navBar";
 import { useNavigate } from "react-router-dom"; // hook pour rediriger vers une page
 
 function LoginForm() {
@@ -49,6 +50,7 @@ function LoginForm() {
 
     return (
         <div className="connexion">
+            <NavBar />
             <div className="middle">
                 <div className="container">
                     <h1 className="pageTitle">Connexion</h1>

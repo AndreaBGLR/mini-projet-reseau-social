@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Footer from "../../Footer/Footer";
+import NavBar from "../../components/navBar/navBar";
 
 function Logout() {
     const navigate = useNavigate();
@@ -13,11 +14,12 @@ function Logout() {
         localStorage.removeItem("token");
 
         // Rediriger l'utilisateur vers la page de connexion
-        navigate("/login");
+        navigate("/src/Auth/Login/LoginForm.jsx");
     }
 
     return (
         <div>
+            <NavBar />
             <p>Êtes-vous sûr de vouloir vous déconnecter ?</p>
             <button onClick={handleLogout}>Déconnexion</button>
             <Footer />

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Register.css";
 import Footer from "../../Footer/Footer";
+import NavBar from "../../components/navBar/navBar";
 
 function Register() {
     const [firstName, setFirstName] = useState("");
@@ -45,6 +46,7 @@ function Register() {
 
     return (
         <div>
+            <NavBar />
             <div>
                 <div className="container">
                     <h1 className="pageTitle">Création de Compte</h1>

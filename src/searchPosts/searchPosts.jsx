@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import NavBar from "../components/navBar/navBar";
 
 function SearchPosts() {
     const [searchTerm, setSearchTerm] = useState("");
@@ -8,17 +9,18 @@ function SearchPosts() {
 
     // Fonction de vérification du token
     const isTokenValid = (token) => {
+        console.log("token", token);
+        const storedToken = localStorage.getItem("token");
         return token === storedToken;
     };
 
     const fetchAllPosts = () => {
         setLoading(true);
         fetch(
-            "https://social-network-api.osc-fr1.scalingo.io/serial-viewer/post",
+            "https://social-network-api.osc-fr1.scalingo.io/serial-viewer/posts?page=2&limit=10",
             {
                 headers: {
                     "Content-Type": "application/json",
-                    Authorization: "bearer token",
                 },
             }
         )
@@ -35,13 +37,9 @@ function SearchPosts() {
             })
             .then((data) => {
                 // Vérifier que le token est correct
-                if (isTokenValid(yourAccessToken)) {
-                    setAllPosts(data);
-                    setLoading(false);
-                } else {
-                    // Gérer erreur de token incorrect
-                    throw new Error("Token invalide");
-                }
+
+                setAllPosts(data.posts);
+                setLoading(false);
             })
             .catch((error) => {
                 console.error("Une erreur s'est produite :", error);
@@ -78,6 +76,7 @@ function SearchPosts() {
 
     return (
         <div>
+            <NavBar />
             <h1>Recherche de Posts</h1>
             <div>
                 <input

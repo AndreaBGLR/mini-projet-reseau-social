@@ -37,7 +37,7 @@ function NavBar(props) {
             </nav>
             <nav className="search lien">
                 <Link to={"/src/searchPosts/searchPosts.jsx"}>
-                    Chercher un KOM
+                    Chercher un Post
                 </Link>
             </nav>
             <nav className="render lien">
