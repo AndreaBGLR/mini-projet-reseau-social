@@ -8,7 +8,7 @@ function RecupPosts() {
   const apiUrlCom =
     "https://social-network-api.osc-fr1.scalingo.io/serial-viewer/post/comment";
   const apiUrlRecup =
-    "https://social-network-api.osc-fr1.scalingo.io/serial-viewer/posts?page=1&limit=10";
+    "https://social-network-api.osc-fr1.scalingo.io/serial-viewer/posts?page=1";
   const [token, setToken] = useState(localStorage.getItem("token"));
   const [posts, setPosts] = useState([]);
   const [com, setCom] = useState("");
@@ -88,7 +88,8 @@ function RecupPosts() {
         throw new Error(`Erreur de réseau - ${response.status}`);
       }
 
-      const data = await response.json()(console.log("rver", data));
+      const data = await response.json();
+      console.log("data", data);
       setLike({ ...like, [postId]: "" });
       recupPosts();
     } catch (error) {
@@ -125,7 +126,7 @@ function RecupPosts() {
                 ))}
               </div>
               {/* {console.log("but",post)} */}
-              <button onClick={() => liker(post)} type="submit">
+              <button onClick={() => liker(post._id)} type="submit">
                 Like
               </button>
               {post.likes.length}
