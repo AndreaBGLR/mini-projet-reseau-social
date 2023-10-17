@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+
 import "./CreatePost.css";
 import RecupPosts from "./RecupPosts";
-import NavBar from "../Components/navBar/navBar";
+import NavBar from "../components/navBar/navBar";
 
 function CreatePost() {
   const apiUrl =

@@ -67,14 +67,18 @@ function SearchPosts() {
         }
     };
 
+    const [selectedPost, setSelectedPost] = useState(null);
+    const openPost = (post) => {
+        setSelectedPost(post);
+    };
+
     return (
         <div>
             <div className="navContainer">
                 <NavBar />
             </div>
             <div className="recherche">
-                <h1>Recherche de Posts</h1>
-                <div>
+                <div className="searchBarContainer">
                     <input
                         type="text"
                         placeholder="Rechercher par titre ou contenu"
@@ -87,11 +91,25 @@ function SearchPosts() {
                 ) : (
                     <div>
                         <h3>Résultats de la recherche :</h3>
-                        <ul>
+                        <ul className="cardContainer">
                             {filteredPosts.map((result) => (
-                                <li key={result.id}>{result.title}</li>
+                                <li
+                                    key={result.id}
+                                    onClick={() => openPost(result)} // Appel de la fonction openPost avec le post actuel
+                                >
+                                    {result.title}
+                                </li>
                             ))}
                         </ul>
+                    </div>
+                )}
+                {selectedPost && (
+                    <div className="postDetail">
+                        <h3>Titre:{selectedPost.title}</h3>
+                        <p>Contenu:{selectedPost.content}</p>
+                        <button onClick={() => setSelectedPost(null)}>
+                            Fermer
+                        </button>
                     </div>
                 )}
             </div>
