@@ -130,8 +130,9 @@ function RecupPosts() {
                   <p key={com.id}>{com.content}</p>
                 ))}
               </div>
-               {/* {console.log("but",post)} */}
+               {console.log("but",post.likes.length)}
                <button onClick={() => liker(post)} type="button">Like</button>
+                {"nombre de like : " + post.likes.length}
             </div>
           </li>
         ))}
