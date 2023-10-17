@@ -68,10 +68,10 @@ function RecupPosts() {
   }, []);
 
 
-  async function liker(likeId) {
+  async function liker(postId) {
 
-    console.log('efzev' ,likeId);
-    setLike({id: likeId._id, firstname: likeId.firstname, lastname: likeId.lastname })
+    console.log('efzev' ,postId);
+    /* setLike({id: likeId._id, firstname: likeId.firstname, lastname: likeId.lastname }) */
 
 
     try {
@@ -82,7 +82,7 @@ function RecupPosts() {
           Authorization: "bearer " + token,
         },
         body :JSON.stringify({
-          postId: like,
+          postId: postId,
         })
         })
         
@@ -91,8 +91,8 @@ function RecupPosts() {
       }
 
       const data = await response.json()
-      (console.log('rver' , like))
-      /* setLike({}) */
+
+      (console.log('rver' , data))
       setLike({...like, [postId]: ""});
       recupPosts();
 
@@ -131,7 +131,8 @@ function RecupPosts() {
                 </button>
               </div>
                {/* {console.log("but",post)} */}
-               <button onClick={() => liker(post)} type="button">Like</button>
+               <button onClick={() => liker(post)} type="submit">Like</button>
+               {post.likes.length}
             </div>
           </li>
         ))}
