@@ -1,15 +1,38 @@
 .recherche {
+    box-sizing: border-box;
     display: flex;
+    margin-left: 20vh;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    min-height: 100vh;
+    min-height: 90vh;
     background-color: #005fde;
     background-image: linear-gradient(90deg, #005fde 0%, #fc00ff 100%);
     color: white; /* Couleur du texte en blanc */
     padding: 20px;
 }
-
+.pagination {
+    background-color: #005fde;
+    background-image: linear-gradient(90deg, #005fde 0%, #fc00ff 100%);
+    color: white; /* Couleur du texte en blanc */
+    padding: 20px;
+    margin-left: 20vh;
+}
+.searchBarContainer {
+    width: 90%;
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+}
+.cardContainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-items: center;
+    overflow: auto;
+}
 .navbar {
     background-color: #005fde;
     color: white;
@@ -17,40 +40,18 @@
     width: 20%; /* Largeur de la barre de navigation sur le côté */
 }
 
-.content {
-    flex: 1; /* Le contenu occupe l'espace restant au centre */
-    width: 80%; /* Largeur du contenu principal (ajustée) */
-    text-align: center;
-    padding: 20px;
-}
-
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 20px;
-}
-
 p {
     font-size: 16px;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
 @media (max-width: 768px) {
     .recherche {
+        margin: 0;
         padding: 10px; /* Réduire l'espacement sur les écrans plus petits */
     }
-
+    .pagination {
+        margin: 0;
+    }
     .navbar {
         width: 100%; /* Barre de navigation en plein écran sur les écrans plus petits */
     }
