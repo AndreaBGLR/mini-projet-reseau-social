@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./post.css";
-import RecupPosts from "./affichagepost";
+import "./CreatePost.css";
+import RecupPosts from "./RecupPosts";
 import NavBar from "../Components/navBar/navBar";
 
 function CreatePost() {
