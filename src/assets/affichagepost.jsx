@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./post.css";
-import NavBar from "../Components/navBar/navBar";
+import NavBar from "../components/navBar/navBar";
 
 function RecupPosts() {
   const apiUrlLike = "https://social-network-api.osc-fr1.scalingo.io/serial-viewer/post/like";
