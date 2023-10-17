@@ -1,4 +1,4 @@
-import Card from "../card/card";
+import Card from "/card/card";
 
 import "./searchPage.css";
 import ApiFilm from "../api/apiFilm";
@@ -55,7 +55,6 @@ function SearchPage(props) {
             });
     };
 
-    /* console.log('search' ,array2); */
     return (
         <div className="alpha">
             <div className="containe">

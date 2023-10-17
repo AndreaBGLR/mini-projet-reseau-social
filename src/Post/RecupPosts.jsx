@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
+
 import "./RecupPosts.css";
-import NavBar from "../Components/navBar/navBar";
+import NavBar from "../components/navBar/navBar";
 
 function RecupPosts() {
+  const apiUrlLike =
+    "https://social-network-api.osc-fr1.scalingo.io/serial-viewer/post/like";
   const apiUrlCom =
     "https://social-network-api.osc-fr1.scalingo.io/serial-viewer/post/comment";
   const apiUrlRecup =
@@ -12,6 +15,7 @@ function RecupPosts() {
   const [com, setCom] = useState("");
   // Use local state for comments
   const [commentStates, setCommentStates] = useState({});
+  const [like, setLike] = useState({});
 
   async function commenter(postId) {
     try {
@@ -65,6 +69,33 @@ function RecupPosts() {
     recupPosts();
   }, []);
 
+  async function liker(postId) {
+    try {
+      const response = await fetch(apiUrlLike, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "bearer " + token,
+        },
+        body: JSON.stringify({
+          postId: postId,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Erreur de réseau - ${response.status}`);
+      }
+
+      const data = await response.json()(console.log("rver", data));
+      setLike({ ...like, [postId]: "" });
+      recupPosts();
+    } catch (error) {
+      console.error("Erreur : " + error);
+    }
+  }
+
+  console.log(posts);
+
   return (
     <div className="galactic-container">
       <NavBar />
@@ -92,6 +123,11 @@ function RecupPosts() {
                   <p key={com.id}>{com.content}</p>
                 ))}
               </div>
+              {/* {console.log("but",post)} */}
+              <button onClick={() => liker(post)} type="submit">
+                Like
+              </button>
+              {post.likes.length}
             </div>
           </li>
         ))}
