@@ -3,6 +3,7 @@ import "./post.css";
 import NavBar from "../Components/navBar/navBar";
 
 function RecupPosts() {
+  const apiUrlLike = "https://social-network-api.osc-fr1.scalingo.io/serial-viewer/post/like";
   const apiUrlCom =
     "https://social-network-api.osc-fr1.scalingo.io/serial-viewer/post/comment";
   const apiUrlRecup =
@@ -12,6 +13,7 @@ function RecupPosts() {
   const [com, setCom] = useState("");
   // Use local state for comments
   const [commentStates, setCommentStates] = useState({});
+  const [like, setLike] = useState({});
 
   async function commenter(postId) {
     try {
@@ -65,6 +67,42 @@ function RecupPosts() {
     recupPosts();
   }, []);
 
+
+  async function liker(likeId) {
+
+    console.log('efzev' ,likeId);
+    setLike({id: likeId._id, firstname: likeId.firstname, lastname: likeId.lastname })
+
+
+    try {
+        const response = await fetch(apiUrlLike, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "bearer " + token,
+        },
+        body :JSON.stringify({
+          postId: like,
+        })
+        })
+        
+      if (!response.ok) {
+        throw new Error(`Erreur de réseau - ${response.status}`);
+      }
+
+      const data = await response.json()
+      (console.log('rver' , like))
+      /* setLike({}) */
+      setLike({...like, [postId]: ""});
+      recupPosts();
+
+    } catch (error) {
+      console.error("Erreur : " + error);
+    }
+  }
+
+  console.log(posts);
+
   return (
     <div>
       <NavBar />
@@ -92,6 +130,8 @@ function RecupPosts() {
                   Commenter
                 </button>
               </div>
+               {/* {console.log("but",post)} */}
+               <button onClick={() => liker(post)} type="button">Like</button>
             </div>
           </li>
         ))}
