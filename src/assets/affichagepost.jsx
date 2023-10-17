@@ -70,10 +70,6 @@ function RecupPosts() {
 
   async function liker(postId) {
 
-    console.log('efzev' ,postId);
-    /* setLike({id: likeId._id, firstname: likeId.firstname, lastname: likeId.lastname }) */
-
-
     try {
         const response = await fetch(apiUrlLike, {
         method: "POST",
@@ -100,6 +96,8 @@ function RecupPosts() {
       console.error("Erreur : " + error);
     }
   }
+
+
 
   console.log(posts);
 
@@ -133,6 +131,7 @@ function RecupPosts() {
                {/* {console.log("but",post)} */}
                <button onClick={() => liker(post)} type="submit">Like</button>
                {post.likes.length}
+               
             </div>
           </li>
         ))}

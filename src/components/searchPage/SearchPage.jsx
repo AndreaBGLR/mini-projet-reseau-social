@@ -55,7 +55,6 @@ function SearchPage(props) {
             });
     };
 
-    /* console.log('search' ,array2); */
     return (
         <div className="alpha">
             <div className="containe">
