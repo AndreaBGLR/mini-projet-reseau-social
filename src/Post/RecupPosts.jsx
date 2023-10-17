@@ -71,7 +71,19 @@ function RecupPosts() {
     recupPosts();
   }, []);
 
-  async function liker(postId) {
+
+  function li(postId, post) 
+    post.likes.forEach(element => {
+       if (element.userId == post.userId) {
+        alert("tu as déja liké connard")
+      }
+    });
+    liker(postId, post)
+  }
+
+
+  async function liker(postId, post) {
+
     try {
       const response = await fetch(apiUrlLike, {
         method: "POST",
@@ -126,7 +138,9 @@ function RecupPosts() {
                 ))}
               </div>
               {/* {console.log("but",post)} */}
-              <button onClick={() => liker(post._id)} type="submit">
+
+              <button onClick={() => li(post._id, post)} type="submit">
+
                 Like
               </button>
               {post.likes.length}
