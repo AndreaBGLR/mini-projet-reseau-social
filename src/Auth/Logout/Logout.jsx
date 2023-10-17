@@ -27,7 +27,6 @@ function Logout() {
                 <p>Êtes-vous sûr de vouloir vous déconnecter ?</p>
                 <button onClick={handleLogout}>Déconnexion</button>
             </div>
-            <Footer />
         </div>
     );
 }
