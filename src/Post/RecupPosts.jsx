@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./post.css";
+import "./RecupPosts.css";
 import NavBar from "../Components/navBar/navBar";
 
 function RecupPosts() {
@@ -104,7 +104,7 @@ function RecupPosts() {
   console.log(posts);
 
   return (
-    <div>
+    <div className="galactic-container">
       <NavBar />
       <h2>Posts Existants</h2>
       <ul>
@@ -112,13 +112,9 @@ function RecupPosts() {
           <li key={post.id}>
             <h3>{post.title}</h3>
             <p>{post.content}</p>
-            <div>
-              {" "}
-              <h4>Commentaires : </h4>
-              {post.comments?.map((com) => (
-                <p key={com.id}>{com.content}</p>
-              ))}
-              <div className="com">
+
+            <div className="comments-section">
+              <div>
                 <input
                   onChange={(e) => setCom(e.target.value)}
                   name="inputCom"
@@ -128,7 +124,11 @@ function RecupPosts() {
                 />
                 <button onClick={() => commenter(post._id)} type="button">
                   Commenter
-                </button>
+                </button>{" "}
+                <h2>Commentaires</h2>
+                {post.comments?.map((com) => (
+                  <p key={com.id}>{com.content}</p>
+                ))}
               </div>
                {/* {console.log("but",post)} */}
                <button onClick={() => liker(post)} type="button">Like</button>
