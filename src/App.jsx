@@ -3,8 +3,8 @@ import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./components/home/Home";
 import React from "react";
-import CreatePost from "./assets/post";
-import RecupPost from "./assets/affichagepost";
+import CreatePost from "./Post/CreatePost";
+import RecupPost from "./Post/RecupPosts";
 import SearchPage from "./components/searchPage/SearchPage";
 import SearchPosts from "./SearchPosts/SearchPosts";
 import LoginForm from "./Auth/Login/LoginForm";
@@ -19,19 +19,19 @@ function App() {
       element: <Home />,
     },
     {
-      path: "/src/Auth/Login/LoginForm.jsx",
+      path: "/LoginForm.jsx",
       element: <LoginForm />,
     },
     {
-      path: "/src/Auth/Register/Register.jsx",
+      path: "/Register.jsx",
       element: <Register />,
     },
     {
-      path: "/src/components/Profile/Profile.jsx",
+      path: "/Profile.jsx",
       element: <Profile />,
     },
     {
-      path: "/src/Auth/Logout/Logout.jsx",
+      path: "/Logout.jsx",
       element: <Logout />,
     },
     {
@@ -39,21 +39,21 @@ function App() {
       element: <SearchPage />,
     },
     {
-      path: "/src/SearchPosts/SearchPosts.jsx",
+      path: "/SearchPosts.jsx",
       element: <SearchPosts />,
     },
     {
-      path: "/src/assets/post.jsx",
+      path: "/CreatePost.jsx",
       element: <CreatePost />,
     },
     {
-      path: "/src/assets/affichagepost.jsx",
+      path: "/RecupPosts.jsx",
       element: <RecupPost />,
     },
-    {
-      path: "/src/assets/comment.jsx",
-      element: <Comment />,
-    },
+    // {
+    //   path: "/src/assets/comment.jsx",
+    //   element: <Comment />,
+    // },
   ]);
 
   /* console.log('app', array[0].original_title); */
