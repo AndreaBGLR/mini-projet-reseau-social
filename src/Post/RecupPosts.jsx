@@ -115,8 +115,11 @@ function RecupPosts() {
         <ul>
           {posts?.map((post) => (
             <li key={post.id}>
-              <h3>{post.title}</h3>
-              <p>{post.content}</p>
+              <div className="publi">
+                <h2 className="tittlePubli">{post.title}</h2>
+                <p className="postPubli">{post.content}</p>
+              </div>
+
               <div className="commentsSection">
                 <div>
                   <div className="sectionCom">

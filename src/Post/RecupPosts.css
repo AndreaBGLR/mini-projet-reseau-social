@@ -28,6 +28,22 @@ li {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
   text-align: left;
 }
+.publi {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+.postPubli {
+  text-align: center;
+  color: white;
+}
+.tittlePubli {
+  text-align: center;
+  color: rgb(233, 152, 209);
+  text-decoration: underl;
+}
 
 input[type="text"] {
   width: 100%;
