@@ -94,6 +94,7 @@ function SearchPosts() {
                         <ul className="cardContainer">
                             {filteredPosts.map((result) => (
                                 <li
+                                    className="cardi"
                                     key={result.id}
                                     onClick={() => openPost(result)} // Appel de la fonction openPost avec le post actuel
                                 >
