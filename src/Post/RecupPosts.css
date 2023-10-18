@@ -99,17 +99,17 @@ input[type="text"] {
   color: #fff;
 }
 .navContainer {
-  height: 100vh; /* Hauteur de la fenêtre visible */
-  width: 15vw; /* Largeur de la navbar */
+  height: 100vh;
+  width: 15vw;
   background-color: black;
   position: fixed;
-  left: 0; /* Fixer la navbar à gauche */
-  z-index: 1; /* Assurer que la navbar est au-dessus du contenu */
+  left: 0;
+  z-index: 1;
 }
 
 .contentContainer {
-  margin-left: 15vw; /* Ajoutez une marge à gauche pour séparer le contenu de la navbar */
-  padding: 20px; /* Ajoutez un espacement pour le contenu pour éviter le chevauchement */
+  margin-left: 15vw;
+  padding: 20px;
 }
 .sectionCom {
   display: flex;
@@ -122,4 +122,31 @@ input[type="text"] {
 }
 .tittleCom {
   color: #caa2a2;
+}
+
+@media screen and (max-width: 768px) {
+  .postsExistants {
+    font-size: 30px;
+    margin: 10px 0;
+  }
+
+  li {
+    padding: 10px;
+    margin: 5px;
+  }
+
+  .motCom {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+
+  .btnCom {
+    padding: 5px 20px;
+  }
+  .btnLike {
+    width: 20%;
+  }
+  .contentContainer {
+    margin-left: 0;
+  }
 }

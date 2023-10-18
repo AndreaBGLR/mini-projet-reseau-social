@@ -68,11 +68,10 @@ function RecupPosts() {
     recupPosts();
   }, []);
 
-
   function li(postId, post) {
-    post.likes.forEach(element => {
-       if (element.userId == post.userId) {
-        alert("tu as déja liké connard")
+    post.likes.forEach((element) => {
+      if (element.userId == post.userId) {
+        alert("tu as déja liké connard");
       }
     });
     liker(postId, post);
@@ -100,7 +99,7 @@ function RecupPosts() {
       setLike({ ...like, [postId]: "" });
       recupPosts();
     } catch (error) {
-      alert('connecte toi pour like')
+      alert("connecte toi pour like");
       console.error("Erreur : " + error);
     }
   }
@@ -124,7 +123,7 @@ function RecupPosts() {
 
               <div className="commentsSection">
                 <div>
-                  <div className="sectionCom">
+                  <div className="sectionLike">
                     {" "}
                     <button
                       className="btnLike"
@@ -134,6 +133,8 @@ function RecupPosts() {
                       💖
                     </button>{" "}
                     {post.likes.length} 👍
+                  </div>
+                  <div className="sectionCom">
                     <input
                       onChange={(e) => setCom(e.target.value)}
                       name="inputCom"
@@ -165,7 +166,6 @@ function RecupPosts() {
                     </ul>
                   ))}
                 </div>
-                {/* {console.log("but",post)} */}
               </div>
             </li>
           ))}
