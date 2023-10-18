@@ -27,7 +27,7 @@ nav {
     background-size: contain;
     background-repeat: no-repeat;
     height: 100%;
-    width: auto;
+    width: 100%;
     position: relative;
 }
 .navImage .tete {
