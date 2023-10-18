@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Profile.css";
 import NavBar from "../navBar/navBar";
 
 function Profile() {
+  // do  an object
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -10,40 +11,46 @@ function Profile() {
   const [occupation, setOccupation] = useState("");
   const [edit, setEdit] = useState(false);
 
-  async function getDataProfil() {
+  async function getDataProfile() {
     const options = {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        Authorization: "bearer" + localStorage.getItem("token"),
+        Authorization: "bearer " + localStorage.getItem("token"),
       },
     };
 
-    const response = await fetch(
-      `https://social-network-api.osc-fr1.scalingo.io/serial-viewer/user`,
-      options
-    );
-    const data = await response.json();
-    setFirstName(data.firstName);
-    setLastName(data.lastName);
-    setEmail(data.email);
-    setAge(data.age);
-    setOccupation(data.occupation);
-
-    console.log(data);
+    try {
+      const response = await fetch(
+        `https://social-network-api.osc-fr1.scalingo.io/serial-viewer/user`,
+        options
+      );
+      if (response.ok) {
+        const data = await response.json();
+        setFirstName(data.firstname);
+        setLastName(data.lastname);
+        setEmail(data.email);
+        setAge(data.age);
+        setOccupation(data.occupation);
+        console.log(data);
+      } else {
+        console.error("Failed to get user data");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
   }
 
   useEffect(() => {
-    getDataProfil();
+    getDataProfile();
   }, []);
 
-  // POSSIBLE TO RENDER ALL WITH PUT NEED TO DO THE UPDATE
-  async function updateDataProfil() {
+  async function updateDataProfile() {
     const options = {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
-        Authorization: "bearer" + localStorage.getItem("token"),
+        Authorization: "bearer " + localStorage.getItem("token"),
       },
       body: JSON.stringify({
         firstname: firstName,
@@ -53,17 +60,26 @@ function Profile() {
         occupation: occupation,
       }),
     };
-    const response = await fetch(
-      `https://social-network-api.osc-fr1.scalingo.io/serial-viewer/user`,
-      options
-    );
-    const data = await response.json();
-    console.log(data);
+
+    try {
+      const response = await fetch(
+        `https://social-network-api.osc-fr1.scalingo.io/serial-viewer/user`,
+        options
+      );
+      if (response.ok) {
+        const data = await response.json();
+        console.log(data);
+      } else {
+        console.error("Impossible d'update les données utilisateur");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
   }
 
   function handleClickEdit() {
     if (edit) {
-      updateDataProfil();
+      updateDataProfile();
     }
     setEdit(!edit);
   }
@@ -77,7 +93,7 @@ function Profile() {
       setAge(user.age);
       setOccupation(user.occupation);
     } else {
-      getDataProfil();
+      getDataProfile();
     }
   }, []);
 
@@ -91,28 +107,25 @@ function Profile() {
           <>
             <div className="profileContainer">
               <h2>Mon Profil d'utilisateur</h2>
+              {/* Render user information */}
               <div className="profileLine2">
-                <label htmlFor="">Nom : </label>
+                <label>Nom:</label>
                 <div className="renderInfo">{lastName}</div>
               </div>
-
               <div className="profileLine2">
-                <label htmlFor="">Prénom:</label>
+                <label>Prénom:</label>
                 <div className="renderInfo">{firstName}</div>
               </div>
-
               <div className="profileLine2">
-                <label htmlFor="">Âge:</label>
+                <label>Âge:</label>
                 <div className="renderInfo">{age}</div>
               </div>
-
               <div className="profileLine2">
-                <label htmlFor="">Occupation: </label>
+                <label>Occupation:</label>
                 <div className="renderInfo">{occupation}</div>
               </div>
-
               <div className="profileLine2">
-                <label htmlFor="">Email: </label>
+                <label>Email:</label>
                 <div className="renderInfo">{email}</div>
               </div>
               <div className="buttonStyle">
@@ -122,43 +135,39 @@ function Profile() {
               </div>
             </div>
           </>
-        ) : edit === true ? (
+        ) : (
           <>
             <div className="editProfileContainer">
-              <h2> Modifier Mon Profil d'utilisateur</h2>
-              <label htmlFor="">Nom :</label>
+              <h2>Modifier Mon Profil d'utilisateur</h2>
+              <label>Nom:</label>
               <input
                 type="text"
                 value={lastName}
                 onChange={(e) => setLastName(e.target.value)}
                 className="formEdit"
               />
-
-              <label htmlFor="">Prénom :</label>
+              <label>Prénom:</label>
               <input
                 type="text"
                 value={firstName}
                 onChange={(e) => setFirstName(e.target.value)}
                 className="formEdit"
               />
-
-              <label htmlFor="">Âge :</label>
+              <label>Âge:</label>
               <input
                 type="text"
                 value={age}
                 onChange={(e) => setAge(e.target.value)}
                 className="formEdit"
               />
-
-              <label htmlFor="">Occupation :</label>
+              <label>Occupation:</label>
               <input
                 type="text"
                 value={occupation}
                 onChange={(e) => setOccupation(e.target.value)}
                 className="formEdit"
               />
-
-              <label htmlFor="">Email :</label>
+              <label>Email:</label>
               <input
                 type="text"
                 value={email}
@@ -172,8 +181,6 @@ function Profile() {
               </div>
             </div>
           </>
-        ) : (
-          ""
         )}
       </div>
     </>
