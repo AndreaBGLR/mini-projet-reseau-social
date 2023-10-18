@@ -1,5 +1,3 @@
-/* post.css (ou nommez-le selon votre préférence) */
-
 body {
   background-color: #000;
   color: #fff;
@@ -7,11 +5,13 @@ body {
   margin: 0;
   padding: 0;
 }
-
-h2 {
-  font-size: 24px;
+.postsExistants {
+  font-size: 50px;
   text-align: center;
   margin: 20px 0;
+  text-decoration: underline;
+  color: rgba(2, 2, 2, 0.7);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 ul {
@@ -26,6 +26,23 @@ li {
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  text-align: left;
+}
+.publi {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+.postPubli {
+  text-align: center;
+  color: white;
+}
+.tittlePubli {
+  text-align: center;
+  color: rgb(233, 152, 209);
+  text-decoration: underl;
 }
 
 input[type="text"] {
@@ -38,25 +55,32 @@ input[type="text"] {
   color: #fff;
 }
 
-button {
+.btnCom {
   background-color: #007acc;
   color: #fff;
   border: none;
-  padding: 10px 20px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btnLike {
+  background-color: #0f4468;
+  color: #fff;
+  border: none;
+  padding: 10px 10px;
   border-radius: 5px;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #005d9d;
+.btnLike:hover {
+  background-color: #5c063f;
+}
+.btnCom:hover {
+  background-color: #962a72;
 }
 
-/* Customize the above styles to achieve the galactic theme you desire. */
-/* galactic-theme.css */
-
-/* Ajoutez un fond de planète */
-.galactic-container {
-  background-image: url("url_de_votre_image_planete.jpg");
+.galacticContainer {
+  background-image: url("https://th.bing.com/th/id/R.7b0731c63c98ac0cd097f762492181b8?rik=mQDG8qlbcrJskg&pid=ImgRaw&r=0");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -64,15 +88,38 @@ button:hover {
 }
 
 /* Style pour la section de commentaires */
-.comments-section {
+.commentsSection {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 20px;
   border-radius: 5px;
   margin-top: 20px;
 }
 
-.comments-section p {
+.commentsSection p {
   color: #fff;
 }
+.navContainer {
+  height: 100vh; /* Hauteur de la fenêtre visible */
+  width: 15vw; /* Largeur de la navbar */
+  background-color: black;
+  position: fixed;
+  left: 0; /* Fixer la navbar à gauche */
+  z-index: 1; /* Assurer que la navbar est au-dessus du contenu */
+}
 
-/* Personnalisez les styles pour obtenir le look galactique souhaité. */
+.contentContainer {
+  margin-left: 15vw; /* Ajoutez une marge à gauche pour séparer le contenu de la navbar */
+  padding: 20px; /* Ajoutez un espacement pour le contenu pour éviter le chevauchement */
+}
+.sectionCom {
+  display: flex;
+  gap: 20px;
+}
+.motCom {
+  text-align: left;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+.tittleCom {
+  color: #caa2a2;
+}

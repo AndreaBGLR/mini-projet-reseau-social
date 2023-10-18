@@ -45,7 +45,7 @@ function LoginForm() {
     }
 
     function goToRegister() {
-        navigate("/src/Auth/Register/Register.jsx"); // Fonction pour rediriger vers la page d'inscription
+        navigate("/Register.jsx"); // Fonction pour rediriger vers la page d'inscription
     }
 
     return (

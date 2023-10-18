@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./navBar.css";
+import Logout from "../../Auth/Logout/Logout";
 
 function NavBar(props) {
     /* console.log(props.tableu[0]); */
@@ -17,14 +18,16 @@ function NavBar(props) {
                     {/* <img src={""} alt="logo" /> */}
                 </div>
             </div>
+            <nav className="logout lien">
+                <button className="logout lien">
+                    <Logout />
+                </button>
+            </nav>
             <nav className="home lien">
                 <Link to={"/"}>Accueil</Link>
             </nav>
             <nav className="login lien">
                 <Link to={"/LoginForm.jsx"}>Connexion</Link>
-            </nav>
-            <nav className="logout lien">
-                <Link to={"/Logout.jsx"}>Déconnexion</Link>
             </nav>
             <nav className="register lien">
                 <Link to={"/Register.jsx"}>Creer un Compte</Link>
