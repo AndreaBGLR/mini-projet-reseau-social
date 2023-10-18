@@ -6,7 +6,7 @@ function Footer() {
         <div className="footer">
             <p>
                 Un grand MERCI Arnaud d'avoir été notre Intervenant. Réalisé par
-                Andréa, Louis-Adrien, Luc et Sergio. Serial-Viewerⓒ 2023
+                Andréa, Louis-Adrien, Luc & Sergio. Serial-Viewerⓒ 2023
             </p>
         </div>
     );
