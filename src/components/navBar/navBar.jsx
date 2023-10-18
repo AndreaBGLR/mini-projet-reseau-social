@@ -23,6 +23,8 @@ function NavBar(props) {
                     {/* <img src={""} alt="logo" /> */}
                 </div>
             </div>
+            <br></br>
+            <br></br>
             <nav>
                 <Logout />
             </nav>
