@@ -21,11 +21,16 @@ function LogoutButton() {
             navigate("/LoginForm.jsx");
         }
     }
+    const isLoggedIn = localStorage.getItem("token") !== null;
 
     return (
-        <button className="logout lien" onClick={handleLogout}>
-            Déconnexion
-        </button>
+        <div>
+            {isLoggedIn && (
+                <button className="logout lien" onClick={handleLogout}>
+                    Déconnexion
+                </button>
+            )}
+        </div>
     );
 }
 
