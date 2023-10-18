@@ -4,7 +4,10 @@ import "./Footer.css";
 function Footer() {
     return (
         <div className="footer">
-            <p>Réalisé par Andréa, Louis-Adrien, Luc et Sergio</p>
+            <p>
+                Réalisé par Andréa, Louis-Adrien, Luc et Sergio. Serial-Viewerⓒ
+                2023
+            </p>
         </div>
     );
 }

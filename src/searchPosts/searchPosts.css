@@ -7,13 +7,13 @@
     min-height: 90vh;
     background-color: #005fde;
     background-image: linear-gradient(90deg, #005fde 0%, #fc00ff 100%);
-    color: white; /* Couleur du texte en blanc */
+    color: white;
     padding: 20px;
 }
 .pagination {
     background-size: 160% auto;
     background-image: linear-gradient(to right, #005fde 0%, #fc00ff 100%);
-    color: white; /* Couleur du texte en blanc */
+    color: white;
     padding: 10px;
     border: none;
     border-radius: 12px;
@@ -51,7 +51,7 @@
     background-color: #005fde;
     color: white;
     padding: 10px;
-    width: 20%; /* Largeur de la barre de navigation sur le côté */
+    width: 20%; /* Largeur navbar */
 }
 .lisearch {
     width: 100vh;
@@ -66,7 +66,7 @@ p {
     background-size: 160% auto;
     margin-left: 20vh;
     background-image: linear-gradient(to right, #005fde 0%, #fc00ff 100%);
-    color: white; /* Couleur du texte en blanc */
+    color: white;
     padding: 10px;
     border: none;
     border-radius: 12px;
@@ -108,7 +108,7 @@ p {
     .changementPage {
         background-color: #005fde;
         background-image: linear-gradient(90deg, #005fde 0%, #fc00ff 100%);
-        color: white; /* Couleur du texte en blanc */
+        color: white;
         padding: 10px;
     }
 }

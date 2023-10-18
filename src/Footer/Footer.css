@@ -7,6 +7,6 @@
 }
 @media (max-width: 768px) {
     .footer {
-        padding: 5px; /* Réduire l'espacement sur les écrans plus petits */
+        padding: 5px; /* Réduire l'espacement */
     }
 }
