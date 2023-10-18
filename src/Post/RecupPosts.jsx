@@ -105,7 +105,7 @@ function RecupPosts() {
     }
   }
 
-  console.log(posts);
+  /* console.log(posts); */
 
   return (
     <div className="galacticContainer">
