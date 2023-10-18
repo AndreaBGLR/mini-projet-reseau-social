@@ -1,105 +1,49 @@
-/* Styles for the entire component */
 body {
-/*   background: url("https://th.bing.com/th/id/OIP.2k_D3JkPM7ngSruzPl9ZFQHaE8?w=293&h=196&c=7&r=0&o=5&pid=1.7")
-    fixed;  *//* Remplacez par l'URL de votre image de galaxie avec des paillettes */
-  background-size: cover;
+  background-color: #000;
   color: #fff;
-  font-family: "Arial", sans-serif;
-}
-
-/* .container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.7
-  ); 
-  border-radius: 10px;
-} *//* Ajoute une opacité au contenu pour le démarquer de l'arrière-plan */
-
-h2 {
-  font-size: 24px;
-  margin: 20px 0;
-  color: #00ccff; /* Bleu électrique */
-}
-
-/* Form styles */
-form {
-  display: flex;
-  flex-direction: column;
-  margin: 10px 0;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.7
-  ); /* Ajoute une opacité au formulaire pour le démarquer de l'arrière-plan */
-  padding: 20px;
-  border-radius: 10px;
-}
-
-label {
-  font-size: 18px;
-  margin: 5px 0;
-  color: #fff;
-}
-
-/* input,
-textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 5px 0;
-  border: 2px solid #00ccff; 
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.7
-  ); 
-  color: #fff;
-}
- */
-button {
-  background-color: #00ccff; /* Bleu électrique */
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  font-size: 18px;
-}
-
-button:hover {
-  background-color: #0088cc; /* Shade of blue on hover */
-}
-
-/* List of existing posts */
-ul {
-  list-style: none;
+  font-family: Arial, sans-serif;
+  margin: 0;
   padding: 0;
 }
 
-li {
-  margin: 20px 0;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.7
-  ); /* Ajoutez une opacité aux éléments de la liste */
-  border: 1px solid #00ccff; /* Bleu électrique */
-  padding: 10px;
+.cardCreatePostContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("https://th.bing.com/th/id/R.7b0731c63c98ac0cd097f762492181b8?rik=mQDG8qlbcrJskg&pid=ImgRaw&r=0");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cardCreatePost .titre {
+  font-size: 40px;
+  color: rgb(233, 152, 209);
+  text-align: center;
+  padding: 20px;
+}
+
+.formulaireContainer .form {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px 0px 40px 60px;
   border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
-h3 {
-  font-size: 20px;
-  color: #00ccff; /* Bleu électrique */
-}
-
-p {
-  font-size: 16px;
+.TextAreaPost textarea {
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 10px;
   color: #fff;
+}
+
+.btnCreer {
+  background-color: #196597;
+  color: #fff;
+  border: none;
+  padding: 10px 50px;
+  border-radius: 5px;
+  cursor: pointer;
 }

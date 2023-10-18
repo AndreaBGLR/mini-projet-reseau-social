@@ -94,6 +94,7 @@ function SearchPosts() {
                         <ul className="cardContainer">
                             {filteredPosts.map((result) => (
                                 <li
+                                    className="lisearch"
                                     key={result.id}
                                     onClick={() => openPost(result)} // Appel de la fonction openPost avec le post actuel
                                 >
@@ -107,22 +108,27 @@ function SearchPosts() {
                     <div className="postDetail">
                         <h3>Titre:{selectedPost.title}</h3>
                         <p>Contenu:{selectedPost.content}</p>
-                        <button onClick={() => setSelectedPost(null)}>
+                        <button
+                            className="pagination"
+                            onClick={() => setSelectedPost(null)}
+                        >
                             Fermer
                         </button>
                     </div>
                 )}
             </div>
 
-            <div className="pagination">
+            <div className="changementPage">
                 <button
                     onClick={() => handlePageChange(currentPage - 1)}
+                    className="changementP"
                     disabled={currentPage === 1}
                 >
                     Page précédente
                 </button>
                 <button
                     onClick={() => handlePageChange(currentPage + 1)}
+                    className="changementP"
                     disabled={filteredPosts.length < PAGE_SIZE}
                 >
                     Page suivante

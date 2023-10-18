@@ -10,7 +10,6 @@ function Register() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    //functions
     const navigate = useNavigate();
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -50,7 +49,7 @@ function Register() {
                 {" "}
                 <NavBar />
             </div>
-            <div>
+            <div className="wrapperRegister">
                 <div className="container">
                     <h1 className="pageTitle">Création de Compte</h1>
                     <form action="" method="post">

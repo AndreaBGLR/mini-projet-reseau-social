@@ -57,21 +57,21 @@ function SearchPage(props) {
 
   return (
     <div className="alpha">
-      <div className="containe">
+      <div className="containerTruc">
         <div className="navContainer">
           <NavBar />
         </div>
 
-        <div className="autre">
-          <div className="redimention">
-            <div className="searchBar">
-              <div className="searchBarContainer">
+        <div className="autreTruc">
+          <div className="redimentionTruc">
+            <div className="searchBarTruc">
+              <div className="searchBarContainerTruc">
                 <input
                   type="text"
                   placeholder="Entrez un nom de film"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="inputSearch"
+                  className="inputSearchTruc"
                   onKeyDown={(event) => {
                     if (event.key == "Enter") {
                       searchMovies(searchTerm);
