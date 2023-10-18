@@ -30,7 +30,14 @@ function NavBar(props) {
         <div className="nav">
             <div className="idSite">
                 <div className="navImage">
-                    <div className="image"></div>
+                    <div className="image">
+                        <a
+                            href="https://youtu.be/KZ6HqUztGJ0?t=43"
+                            target="_blank"
+                        >
+                            <button className="imageUn"></button>
+                        </a>
+                    </div>
                     <div className="tete"></div>
                 </div>
                 <div className="toggle" onClick={toggleBurger}>
@@ -89,6 +96,8 @@ function NavBar(props) {
                 )}
 
             </div>
+            <br></br>
+            <br></br>
             <nav>
                 <Logout />
             </nav>

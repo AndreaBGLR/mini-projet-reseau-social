@@ -51,8 +51,10 @@ function LoginForm() {
         const isOublier = window.confirm("Bah pas maintenant !");
         if (isOublier) {
             window.confirm("j'ai dit pas maintenant");
-            // Rediriger l'utilisateur vers la page de connexion
-            navigate("/LoginForm.jsx");
+            window.open(
+                "https://www.youtube.com/watch?v=8AF-Sm8d8yk",
+                "_blank"
+            );
         }
     }
     return (
