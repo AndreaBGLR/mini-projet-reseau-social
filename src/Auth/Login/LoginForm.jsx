@@ -47,7 +47,14 @@ function LoginForm() {
     function goToRegister() {
         navigate("/Register.jsx"); // Fonction pour rediriger vers la page d'inscription
     }
-
+    function goToOublier() {
+        const isOublier = window.confirm("Bah pas maintenant ?");
+        if (isOublier) {
+            window.confirm("j'ai dit pas maintenant");
+            // Rediriger l'utilisateur vers la page de connexion
+            navigate("/LoginForm.jsx");
+        }
+    }
     return (
         <div>
             <div className="navContainer">
@@ -84,6 +91,11 @@ function LoginForm() {
                         <div className="buttonRegister">
                             <button onClick={goToRegister}>
                                 Créer un Compte
+                            </button>
+                        </div>
+                        <div className="buttonOublier">
+                            <button onClick={goToOublier}>
+                                Mot de passe oublié?
                             </button>
                         </div>
                     </div>
