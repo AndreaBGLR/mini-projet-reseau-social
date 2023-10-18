@@ -153,7 +153,13 @@ function RecupPosts() {
                   )}
                   {post.comments?.map((com) => (
                     <ul>
-                      <li key={com.id}>{com.content}</li>
+                      <li key={com.id}>
+                        {" "}
+                        <p className="tittleCom">
+                          {com.lastname}
+                          <span> {com.firstname}:</span> {com.content}
+                        </p>
+                      </li>
                     </ul>
                   ))}
                 </div>
