@@ -43,7 +43,6 @@ function CreatePost() {
         <NavBar />
       </div>
       <div className="cardCreatePostContainer">
-
         <div className="cardCreatePost">
           <div className="titre">
             <h2>Créer un post</h2>
@@ -51,38 +50,41 @@ function CreatePost() {
           <div className="formulaireContainer">
             <div className="form">
               <form>
-                    <div className="titrePost">
-                      <input
-                        placeholder="Titre de votre post"
-                        type="text"
-                        value={post.title}
-                        onChange={(e) => setPost({ ...post, title: e.target.value })}
-                      />
-                    </div>
+                <div className="titrePost">
+                  <input
+                    placeholder="Titre de votre post"
+                    type="text"
+                    value={post.title}
+                    onChange={(e) =>
+                      setPost({ ...post, title: e.target.value })
+                    }
+                  />
+                </div>
 
-                    <div className="TextAreaPost">
-                      <textarea
-                        placeholder="Contenu du post"
-                        value={post.content}
-                        onChange={(e) => setPost({ ...post, content: e.target.value })}
-                      ></textarea>
-                    </div>
+                <div className="TextAreaPost">
+                  <textarea
+                    placeholder="Contenu du post"
+                    value={post.content}
+                    onChange={(e) =>
+                      setPost({ ...post, content: e.target.value })
+                    }
+                  ></textarea>
+                </div>
 
-                    <div className="ButonForm">
-                      <button type="button" onClick={createPost}>
-                        Créer le Post
-                      </button>
-                    </div>
-
-                </form>
+                <div className="ButonForm">
+                  <button
+                    type="button"
+                    className="btnCreer"
+                    onClick={createPost}
+                  >
+                    Créer le Post
+                  </button>
+                </div>
+              </form>
             </div>
-
           </div>
         </div>
-
-
       </div>
-
     </div>
   );
 }
