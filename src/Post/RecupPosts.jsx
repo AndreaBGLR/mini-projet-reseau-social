@@ -105,6 +105,7 @@ function RecupPosts() {
       setLike({ ...like, [postId]: "" });
       recupPosts();
     } catch (error) {
+      alert('connecte toi pour like')
       console.error("Erreur : " + error);
     }
   }

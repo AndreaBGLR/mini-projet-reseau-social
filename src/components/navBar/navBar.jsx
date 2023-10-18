@@ -10,7 +10,10 @@ function NavBar(props) {
                     <p>Serial viewer</p>
                 </div> */}
                 <div className="navImage">
-                    <div className="image"></div>
+                    <div className="image">
+                        
+                    </div>
+                    <div className="tete"></div>
                     {/* <img src={""} alt="logo" /> */}
                 </div>
             </div>
