@@ -12,7 +12,10 @@ function NavBar(props) {
                 </div> */}
                 <div className="navImage">
                     <div className="image">
-                        <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">
+                        <a
+                            href="https://youtu.be/KZ6HqUztGJ0?t=43"
+                            target="_blank"
+                        >
                             <button className="imageUn"></button>
                         </a>
                     </div>
