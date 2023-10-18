@@ -48,7 +48,7 @@ function LoginForm() {
         navigate("/Register.jsx"); // Fonction pour rediriger vers la page d'inscription
     }
     function goToOublier() {
-        const isOublier = window.confirm("Bah pas maintenant ?");
+        const isOublier = window.confirm("Bah pas maintenant !");
         if (isOublier) {
             window.confirm("j'ai dit pas maintenant");
             // Rediriger l'utilisateur vers la page de connexion
@@ -95,7 +95,7 @@ function LoginForm() {
                         </div>
                         <div className="buttonOublier">
                             <button onClick={goToOublier}>
-                                Mot de passe oublié?
+                                Mot de passe oublié ?
                             </button>
                         </div>
                     </div>

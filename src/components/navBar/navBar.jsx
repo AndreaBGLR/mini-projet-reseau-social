@@ -19,9 +19,13 @@ function NavBar(props) {
             <nav>
                 <Logout />
             </nav>
+            <br></br>
+            <br></br>
             <nav className="home lien">
                 <Link to={"/"}>Accueil</Link>
             </nav>
+            <br></br>
+            <br></br>
             <nav className="login lien">
                 <Link to={"/LoginForm.jsx"}>Connexion</Link>
             </nav>
@@ -31,17 +35,19 @@ function NavBar(props) {
             <nav className="profile lien">
                 <Link to={"/Profile.jsx"}>Editer Profil</Link>
             </nav>
+            <br></br>
+            <br></br>
             <nav className="search lien">
                 <Link to={"/search"}>Chercher un film</Link>
             </nav>
-            <nav className="search lien">
-                <Link to={"/searchPosts.jsx"}>Chercher un Post</Link>
+            <nav className="create lien">
+                <Link to={"/CreatePost.jsx"}>Créer un post</Link>
             </nav>
             <nav className="render lien">
                 <Link to={"/RecupPosts.jsx"}>Afficher Posts</Link>
             </nav>
-            <nav className="create lien">
-                <Link to={"/CreatePost.jsx"}>Créer un post</Link>
+            <nav className="search lien">
+                <Link to={"/searchPosts.jsx"}>Chercher un Post</Link>
             </nav>
         </div>
     );
