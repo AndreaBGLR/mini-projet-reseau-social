@@ -17,7 +17,7 @@
     height: 15%;
     background-color: #0053c3;
     background-image: linear-gradient(90deg, #0053c3 0%, #da05f7 100%);
-    z-index: 3;
+    /* z-index: 3; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,6 +80,7 @@
     align-items: center; /* Centrer horizontalement sur les écrans plus petits */
     gap: 10px; /* Augmentation de l'espacement entre les éléments */
   }
+
 }
 
 @media (max-width: 576px) {

@@ -69,3 +69,45 @@ nav {
 .lien:hover a {
     color: #0053c3;
 }
+
+@media (max-width: 768px) {
+
+  .toggle{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 10%;
+    width: 66%;
+/*     background-color: red; */
+    z-index: 55;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .toggle div{
+    width: 100%;
+    height: 10%;
+    background-color: white;
+    display: flex;
+  }
+
+  .active-burger{
+    height: 100%;
+    width: 100%;
+    background-color: #da05f7;
+  }
+  .gg{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: springgreen;
+    z-index: 54;
+  }
+  .navImage{
+    display: none;
+  }
+  .lien{
+    display: none;
+  }
+
+}

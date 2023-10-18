@@ -37,6 +37,7 @@ body {
   border-radius: 5px;
   padding: 10px;
   color: #fff;
+  resize: none;
 }
 
 .btnCreer {
