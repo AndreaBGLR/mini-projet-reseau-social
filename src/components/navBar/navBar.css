@@ -1,38 +1,37 @@
-
-.nav{
-    height: 100%;
-    width: 100%;
-    background-color: #000000;
-    background-image: linear-gradient(90deg, #000000 0%, #0053c3 100%);
+.nav {
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+  background-image: linear-gradient(90deg, #000000 0%, #0053c3 100%);
 }
-nav{
-    color: white;
+nav {
+  color: white;
 }
-.idSite{
-    width: 100%;
-    height: 15%;
-    color: white;
-    text-transform: uppercase;
-    font-size: large;
+.idSite {
+  width: 100%;
+  height: 15%;
+  color: white;
+  text-transform: uppercase;
+  font-size: large;
 }
-.lien{
-    width: 100%;
-    height: 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.lien {
+  width: 100%;
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.lien a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-transform: uppercase;
-    font-size: large;
+.lien a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-transform: uppercase;
+  font-size: large;
 }
-.lien:hover{
-    background-color: white;
+.lien:hover {
+  background-color: white;
 }
-.lien:hover a{
-    color: #0053c3;
+.lien:hover a {
+  color: #0053c3;
 }

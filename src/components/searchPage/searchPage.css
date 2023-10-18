@@ -1,89 +1,89 @@
 .container {
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100%;
 }
 
 .autre {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-end;
 }
 .searchBar {
-    width: 100%;
-    height: 15%;
-    background-color: #0053c3;
-    background-image: linear-gradient(90deg, #0053c3 0%, #da05f7 100%);
-    z-index: 3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 15%;
+  background-color: #0053c3;
+  background-image: linear-gradient(90deg, #0053c3 0%, #da05f7 100%);
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .redimention {
-    width: 85%;
-    height: 100%;
+  width: 85%;
+  height: 100%;
 }
 
 .cardContainer {
-    height: 85%;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 50% 50% 50% 50%;
-    align-items: center;
-    justify-items: center;
-    overflow: auto;
+  height: 85%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 50% 50% 50% 50%;
+  align-items: center;
+  justify-items: center;
+  overflow: auto;
 }
 .searchBarContainer {
-    width: 90%;
-    height: 40%;
-    display: flex;
-    flex-direction: row;
-    gap: 5%;
+  width: 90%;
+  height: 40%;
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
 }
 .inputSearch {
-    height: 97%;
-    width: 85%;
-    border: none;
-    border-bottom: 2px solid black;
-    border-radius: 5px;
-    font-size: large;
-    padding-left: 20px;
-    background-color: rgba(0, 255, 255, 0);
+  height: 97%;
+  width: 85%;
+  border: none;
+  border-bottom: 2px solid black;
+  border-radius: 5px;
+  font-size: large;
+  padding-left: 20px;
+  background-color: rgba(0, 255, 255, 0);
 }
 
 .inputSearch:focus {
-    outline: none;
+  outline: none;
 }
 .buttonSearch {
-    height: 100%;
-    width: 20%;
-    border-radius: 5px;
+  height: 100%;
+  width: 20%;
+  border-radius: 5px;
 }
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column; /* Passage à une disposition en colonne sur les écrans plus petits */
-    }
+  .container {
+    flex-direction: column; /* Passage à une disposition en colonne sur les écrans plus petits */
+  }
 
-    .searchBarContainer {
-        flex-direction: column;
-        align-items: center; /* Centrer horizontalement sur les écrans plus petits */
-        gap: 10px; /* Augmentation de l'espacement entre les éléments */
-    }
+  .searchBarContainer {
+    flex-direction: column;
+    align-items: center; /* Centrer horizontalement sur les écrans plus petits */
+    gap: 10px; /* Augmentation de l'espacement entre les éléments */
+  }
 }
 
 @media (max-width: 576px) {
-    .searchBar {
-        height: auto; /* Hauteur automatique pour le contenu sur les écrans très petits */
-    }
+  .searchBar {
+    height: auto; /* Hauteur automatique pour le contenu sur les écrans très petits */
+  }
 
-    .searchBarContainer {
-        width: 100%; /* Largeur maximale sur les écrans très petits */
-    }
+  .searchBarContainer {
+    width: 100%; /* Largeur maximale sur les écrans très petits */
+  }
 
-    .inputSearch {
-        width: 100%; /* Largeur maximale sur les écrans très petits */
-    }
+  .inputSearch {
+    width: 100%; /* Largeur maximale sur les écrans très petits */
+  }
 }

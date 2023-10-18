@@ -1,76 +1,76 @@
 .recherche {
-    box-sizing: border-box;
-    display: flex;
-    margin-left: 20vh;
-    flex-direction: column;
-    align-items: center;
-    min-height: 90vh;
-    background-color: #005fde;
-    background-image: linear-gradient(90deg, #005fde 0%, #fc00ff 100%);
-    color: white; /* Couleur du texte en blanc */
-    padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  margin-left: 20vh;
+  flex-direction: column;
+  align-items: center;
+  min-height: 90vh;
+  background-color: #005fde;
+  background-image: linear-gradient(90deg, #005fde 0%, #fc00ff 100%);
+  color: white; /* Couleur du texte en blanc */
+  padding: 20px;
 }
 .pagination {
-    background-color: #005fde;
-    background-image: linear-gradient(90deg, #005fde 0%, #fc00ff 100%);
-    color: white; /* Couleur du texte en blanc */
-    padding: 20px;
-    margin-left: 20vh;
+  background-color: #005fde;
+  background-image: linear-gradient(90deg, #005fde 0%, #fc00ff 100%);
+  color: white; /* Couleur du texte en blanc */
+  padding: 20px;
+  margin-left: 20vh;
 }
 .cardi {
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    margin: 10px;
-    padding: 90px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-    align-items: center;
-    text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 10px;
+  padding: 90px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  align-items: center;
+  text-align: center;
 }
 .searchBarContainer {
-    width: 90%;
-    height: 40%;
-    display: flex;
-    flex-direction: row;
-    gap: 5%;
+  width: 90%;
+  height: 40%;
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
 }
 .cardContainer {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-items: center;
-    overflow: auto;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-items: center;
+  overflow: auto;
 }
 .navbar {
-    background-color: #005fde;
-    color: white;
-    padding: 10px;
-    width: 20%; /* Largeur de la barre de navigation sur le côté */
+  background-color: #005fde;
+  color: white;
+  padding: 10px;
+  width: 20%; /* Largeur de la barre de navigation sur le côté */
 }
 
 p {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 @media (max-width: 768px) {
-    .recherche {
-        margin: 0;
-        padding: 10px; /* Réduire l'espacement sur les écrans plus petits */
-    }
-    .pagination {
-        margin: 0;
-    }
-    .navbar {
-        width: 100%; /* Barre de navigation en plein écran sur les écrans plus petits */
-    }
+  .recherche {
+    margin: 0;
+    padding: 10px; /* Réduire l'espacement sur les écrans plus petits */
+  }
+  .pagination {
+    margin: 0;
+  }
+  .navbar {
+    width: 100%; /* Barre de navigation en plein écran sur les écrans plus petits */
+  }
 
-    .content {
-        width: 100%; /* Contenu principal en plein écran sur les écrans plus petits */
-    }
+  .content {
+    width: 100%; /* Contenu principal en plein écran sur les écrans plus petits */
+  }
 
-    input[type="text"] {
-        margin-bottom: 10px; /* Réduire la marge sous le champ de recherche sur les écrans plus petits */
-    }
+  input[type="text"] {
+    margin-bottom: 10px; /* Réduire la marge sous le champ de recherche sur les écrans plus petits */
+  }
 }
