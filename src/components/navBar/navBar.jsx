@@ -11,7 +11,11 @@ function NavBar(props) {
                     <p>Serial viewer</p>
                 </div> */}
                 <div className="navImage">
-                    <div className="image"></div>
+                    <div className="image">
+                        <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">
+                            <button className="imageUn"></button>
+                        </a>
+                    </div>
                     <div className="tete"></div>
                     {/* <img src={""} alt="logo" /> */}
                 </div>
