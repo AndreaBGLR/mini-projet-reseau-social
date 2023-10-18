@@ -78,10 +78,6 @@ label {
   background-position: right center;
 }
 @media (max-width: 768px) {
-  .navContainer {
-    display: none; /* Masquer la navigation sur les écrans plus petits */
-  }
-
   .container {
     text-align: center; /* Centrer le contenu sur les écrans plus petits */
   }
