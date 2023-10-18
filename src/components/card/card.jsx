@@ -78,13 +78,13 @@ function Card(props){
                                     <img src={`${props.tableau.Poster}`} alt="" />
                                 </div>
                                 <div className="modal-title">
-                                    {props.tableau.Title} 
+                                    {"Titre : " + props.tableau.Title} 
                                 </div>
                                 <div className="modal-title">
-                                    {props.tableau.Year}
+                                    {"Année : " + props.tableau.Year}
                                 </div>
                                 <div className="modal-title">
-                                    {props.tableau.Type} 
+                                    {"Type : " + props.tableau.Type} 
                                 </div>
                             </div>
                             <div className="modalCommentaire">
@@ -93,11 +93,11 @@ function Card(props){
                                     {posts?.map((element,index) => {
                                         return (<div className="modal_com" key={index}>
                                             {"prenom : " + element.firstname}
-                                            <br></br>
+                                            <br/>
                                             {"nom : " + element.lastname}
-                                            <br />
+                                            <br/>
                                             {"nombre de like : " + element.likes.length}
-                                            <br />
+                                            <br/>
                                             {"nombre de commentaire : " + element.comments.length}
                                         </div>)
                                     })}
