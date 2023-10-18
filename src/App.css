@@ -8,12 +8,4 @@
 p {
     margin: 0;
 }
-@media (max-width: 768px) {
-    #root {
-        text-align: left; /* Alignement à gauche sur les écrans plus petits */
-    }
 
-    p {
-        text-align: left; /* Alignement du texte à gauche sur les écrans plus petits */
-    }
-}

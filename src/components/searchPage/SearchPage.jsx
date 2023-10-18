@@ -55,6 +55,8 @@ function SearchPage(props) {
       });
   };
 
+
+
   return (
     <div className="alpha">
       <div className="containerTruc">

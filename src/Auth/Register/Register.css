@@ -78,6 +78,7 @@ label {
   background-position: right center;
 }
 @media (max-width: 768px) {
+
   .container {
     text-align: center; /* Centrer le contenu sur les écrans plus petits */
   }

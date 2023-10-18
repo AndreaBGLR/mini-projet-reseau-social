@@ -50,6 +50,7 @@ function Card(props){
     } else {
         document.body.classList.remove('active-modal')
     }
+    
     return(
         <div className="card" onClick={toggleModal}>
             <div className="cardImage">
