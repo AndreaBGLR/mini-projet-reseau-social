@@ -17,7 +17,7 @@ function Home(props) {
                     </div> 
                 </div>
 
-                <div className="topFilm">
+{/*                 <div className="topFilm">
                     <div className="affichageTop">
 
                     </div>
@@ -32,7 +32,7 @@ function Home(props) {
                     <div className="affichageList">
     
                     </div>
-                </div>
+                </div> */}
             </section>
 
 

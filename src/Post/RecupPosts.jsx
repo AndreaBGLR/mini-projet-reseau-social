@@ -68,10 +68,11 @@ function RecupPosts() {
     recupPosts();
   }, []);
 
+
   function li(postId, post) {
-    post.likes.forEach((element) => {
-      if (element.userId == post.userId) {
-        alert("tu as déja liké connard");
+    post.likes.forEach(element => {
+       if (element.userId == post.userId) {
+        alert("tu as déja liké connard")
       }
     });
     liker(postId, post);
@@ -99,6 +100,7 @@ function RecupPosts() {
       setLike({ ...like, [postId]: "" });
       recupPosts();
     } catch (error) {
+      alert('connecte toi pour like')
       console.error("Erreur : " + error);
     }
   }

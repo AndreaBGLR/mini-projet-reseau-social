@@ -7,11 +7,15 @@ function NavBar(props) {
     return (
         <div className="nav">
             <div className="idSite">
-                <div className="titre">
+{/*                 <div className="titre">
                     <p>Serial viewer</p>
-                </div>
+                </div> */}
                 <div className="navImage">
-                    <img src={""} alt="logo" />
+                    <div className="image">
+                        
+                    </div>
+                    <div className="tete"></div>
+                    {/* <img src={""} alt="logo" /> */}
                 </div>
             </div>
             <nav className="logout lien">
