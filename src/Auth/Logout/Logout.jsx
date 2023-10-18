@@ -1,7 +1,5 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Footer from "../../Footer/Footer";
-import NavBar from "../../components/navBar/navBar";
 
 function LogoutButton() {
     const navigate = useNavigate();
@@ -24,15 +22,11 @@ function LogoutButton() {
         }
     }
 
-    return <button onClick={handleLogout}>Déconnexion</button>;
-}
-
-function Logout() {
     return (
-        <div className="logout lien">
-            <LogoutButton />
-        </div>
+        <button className="logout lien" onClick={handleLogout}>
+            Déconnexion
+        </button>
     );
 }
 
-export default Logout;
+export default LogoutButton;

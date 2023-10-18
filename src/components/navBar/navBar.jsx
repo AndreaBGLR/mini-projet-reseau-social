@@ -16,7 +16,7 @@ function NavBar(props) {
                     {/* <img src={""} alt="logo" /> */}
                 </div>
             </div>
-            <nav className="logout lien">
+            <nav>
                 <Logout />
             </nav>
             <nav className="home lien">
